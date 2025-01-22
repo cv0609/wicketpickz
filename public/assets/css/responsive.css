@@ -12,9 +12,6 @@
     padding: 30px;
   }
 
-  .banner {
-    height: 450px;
-  }
   .leagues-pages {
     height: 450px;
   }
@@ -54,6 +51,9 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .banner_desc {
+    font-size: 16px;
+}
 
   .hero-section {
     padding-top: 148px;

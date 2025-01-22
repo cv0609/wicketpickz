@@ -1336,7 +1336,7 @@ Banner section
 
 .banner {
   background-image: url("../images/latest2.jpg");
-  height: 450px;
+  height: 600px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1387,6 +1387,7 @@ Banner section
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 12px;
+  color: #000;
 }
 
 .info_heading {
@@ -1405,6 +1406,7 @@ Banner section
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 10px;
+  color: #000;
 }
 
 .info_item::marker {
@@ -1711,6 +1713,8 @@ margin-right: 10px;
   font-size: 16px;
   margin-bottom: 8px;
   list-style: disc;
+  color: #000;
+  font-weight: 400;
 }
 
 .playingGuide_item::marker {
@@ -2407,10 +2411,11 @@ img {
 }
 
 #login-signup {
-  padding: 16px;
+  padding: 50px 16px;
   border-radius: 0 20px;
   background-color: white;
   border-radius: 4px;
+  position: relative;
 }
 
 #login-signup input {
@@ -5463,11 +5468,12 @@ li.team-member .match-team-logo img {
 .bannerLogin_wrapper {
   width: 100%;
   max-width: 700px;
-  padding: 34px;
+  padding: 60px 34px;
   border-radius: 16px;
   margin: 0 auto;
   background-color: transparent;
   border: 1px solid #fff;
+  position: relative;
 }
 
 .bannerLogin {
@@ -6011,4 +6017,17 @@ li.team-member .match-team-logo img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+
+.bannerLogin_wrapper span.alert ,#login-signup span.alert{
+  top: 10px;
+  position: absolute;
+  max-width: 250px;
+  width: 100%;
+  padding: 5px;
+  font-size: 12px;
+  left: 50%;
+  transform: translateX(-50%);
 }

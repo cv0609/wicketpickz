@@ -74,8 +74,7 @@
 
                                 </li>
                                 <li class="playingGuide_item">
-                                    <strong>Team Composition: </strong> 11 players, adhering to the following
-                                    guidelines:
+                                    <strong>Team Composition: </strong> Select 11 players, adhering to the following guidelines:
                                 </li>
                             </ul>
                             <ul class="playingGuide_subList">

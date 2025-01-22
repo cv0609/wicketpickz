@@ -48,24 +48,27 @@
                             <form class="contact_form">
                                 <label class="contact_label">
                                     Your Name
-                                    <input class="contact_input" type="text" placeholder="Let us know who you are.">
+                                    <input class="contact_input" type="text" placeholder="Your Name">
                                 </label>
                                 <label class="contact_label">
                                     Email Address
-                                    <input class="contact_input" type="email" placeholder="Provide a valid email">
+                                    <input class="contact_input" type="email" placeholder="Email Address">
                                 </label>
                                 <label class="contact_label">
                                     Subject
                                     <input class="contact_input" type="text"
-                                        placeholder=" brief summary of your query or feedback">
+                                        placeholder="Subject">
                                 </label>
                                 <label class="contact_label">
                                     Message
-                                    <textarea class="input_textarea" placeholder="all the relevant details"></textarea>
+                                    <textarea class="input_textarea" placeholder="Message"></textarea>
                                 </label>
                                 <input class="custom-btn contact_btn" type="submit" value="Submit">
                             </form>
+                       <p class="mt-3">
+                    Simply submit the form on our website, and our support team will reach out as soon as possible.
 
+                          </p>
                         </div>
                     </div>
                     <div class="contact_left">

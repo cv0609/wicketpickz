@@ -7,7 +7,7 @@
             <ul class="leagues-ul">
                 <li class="inline-list home-list">
                     <h3>
-                        <a href="./">Homepage</a>
+                        <a href="./">Home</a>
                     </h3>
                 </li>
                 <li class="inline-list next-page-list">

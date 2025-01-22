@@ -2,7 +2,7 @@
     <footer class="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-12 me-auto text-center">
+                <div class="col-lg-12 col-12 me-auto text-center pb-4">
                     <h4 class="footer-disclaimer">Disclaimer</h4>
                     <p>Wicket Pickz is a fantasy cricket platform designed for entertainment purposes only. All
                         information provided on this website is intended for personal use and does not guarantee
@@ -58,7 +58,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-12 me-auto text-center">
-                    <h5 class="footer-title">Socials Link</h5>
+                    <h5 class="footer-title">Social Link</h5>
                     <div class="socials">
                         <div class="socials_wrapper">
                             <a href="https://www.facebook.com/" target="__blank" class="social">

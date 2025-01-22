@@ -12,12 +12,12 @@
                 <ul class="leagues-ul">
                     <li class="inline-list home-list">
                         <h3>
-                            <a href="{{ route('home') }}">Page D'accueil</a>
+                            <a href="{{ route('home') }}">Home</a>
                         </h3>
                     </li>
                     <li class="inline-list next-page-list">
                         <h3>
-                            Mes matchs
+                            My Matches
                         </h3>
                     </li>
                 </ul>
