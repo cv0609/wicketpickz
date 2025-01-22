@@ -21,6 +21,7 @@
 
 </section>
 <!--  -->
+@if(!Auth::check())
 <div class="bannerLogin">
     <div class="container">
         <div class="bannerLogin_wrapper">
@@ -48,6 +49,8 @@
         </div>
     </div>
 </div>
+@endif
+
 <!-- join leageu section -->
 <section class="joinleagues">
     <div class="container">
