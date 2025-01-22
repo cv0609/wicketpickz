@@ -47,7 +47,7 @@
                 $startSoonMatch = getMatchStatus($matche->fixture_date);
                 @endphp
                     <li class="matches_item matche-main"  data-fixture-id="{{ $matche->id}}"  data-home-team="{{ $matche->home_team_id }}" data-away-team="{{ $matche->away_team_id }}">
-                        <a href="matches-details.html" class="matches_link">
+                        <a href="{{ route('matche-detail',['matcheId'=>$matche->id]) }}" class="matches_link">
                             <div class="matches_head">
                                 <span class="tournament-name">{{$matche->venue_name}}</span>
                                 <span class="stadium-name">{{$matche->venue_city}}</span>
