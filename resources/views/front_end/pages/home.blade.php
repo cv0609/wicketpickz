@@ -11,7 +11,7 @@
                 <h1>Wicket Pickz Fantasy
                 </h1>
 
-                <a class="btn custom-btn smoothscroll me-2 mb-2" href="leagues.html"><strong>Play</strong></a>
+                <a class="btn custom-btn smoothscroll me-2 mb-2" href="{{ route('leagues') }}"><strong>Play</strong></a>
             </div>
 
         </div>
