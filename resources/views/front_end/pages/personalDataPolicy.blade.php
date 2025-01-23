@@ -29,7 +29,7 @@
                     account, interact with our platform, and communicate with us. The types of personal data we
                     collect include:</p>
                 <ul class="info_list">
-                    <li class="info_item">Account Information: Name, email address, date of birth, and contact
+                    <li class="info_item"><strong> Account Information:</strong> Name, email address, date of birth, and contact
                         details.</li>
                     <li class="info_item"><strong>Payment Information:</strong> Credit/debit card details, payment
                         methods, and transaction history.</li>
@@ -38,8 +38,10 @@
                     </li>
                     <li class="info_item"><strong>Communication Data:</strong> Messages you send to us, including
                         feedback, support requests, and any other communications.</li>
-                    <li class="info_item"><strong>Location Data: </strong> geographical location based on your IP
-                        address or provided information, where applicable.</li>
+                    <li class="info_item">
+                    <strong>Location Data: </strong> Your geographical location based on your IP address or provided information, where applicable.
+
+                    </li>
                 </ul>
                 <h2 class="info_heading">2. How We Use Your Data</h2>
                 <p class="info_desc">We use your personal data for the following purposes:</p>
@@ -56,7 +58,7 @@
                         as fraud prevention and dispute resolution.</li>
                 </ul>
                 <h2 class="info_heading">3. Sharing Your Data</h2>
-                <p>We do not sell, rent, or trade your personal data. However, we may share your information in the
+                <p class="info_desc">We do not sell, rent, or trade your personal data. However, we may share your information in the
                     following circumstances:</p>
                 <ul class="info_list">
                     <li class="info_item"><strong>Service Providers:</strong> We may share your data with trusted

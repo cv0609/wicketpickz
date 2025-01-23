@@ -81,7 +81,7 @@
                     </li>
                 </ul>
 
-                <h3 class="info_list">
+                <h3 class="info_heading">
 
                     4. Use of the Platform
 
@@ -243,6 +243,49 @@
                     months preceding the claim.
 
                 </p>
+                <h3 class="info_heading">11. Indemnification
+
+                </h3>
+                <p class="info_desc">You agree to indemnify and hold Wicket Pickz harmless from any claims, damages, or losses arising from:
+                    </p>
+                    <ul class="info_list">
+                        <li class="info_item">Your use of the platform.</li>
+                        <li class="info_item">Your violation of these Terms. </li>
+                        <li class="info_item">Any illegal or unauthorized activities conducted through your account.
+                        </li>
+                    </ul>
+
+
+                    <h3 class="info_heading">12. Termination of Services
+
+                         </h3>
+           <p class="info_desc">We reserve the right to suspend or terminate your account at our sole discretion, including but not limited to violations of these Terms or suspected fraudulent activities.
+                </p>
+                <h3 class="info_heading">13. Changes to Terms and Conditions
+                         </h3>
+                         <p class="info_desc">Wicket Pickz may update these Terms periodically. Changes will be posted on this page, and your continued use of the platform constitutes acceptance of the revised Terms.
+                         </p>
+                         <h3 class="info_heading">14. Governing Law and Dispute Resolution
+
+                         </h3>
+                         <ul class="info_list">
+                        <li class="info_item"><strong> Governing Law:</strong> These Terms are governed by the laws of the applicable jurisdiction.
+                        </li>
+                        <li class="info_item"><strong> Dispute Resolution:</strong> Any disputes arising from these Terms will be resolved through arbitration or the courts.
+
+                        </li>
+                       
+                    </ul>
+                    <h3 class="info_heading">15. Contact Us
+                    </h3>
+                    <p class="info_desc">If you have any questions about these Terms, please contact us at:
+                    </p>
+                    <p class="info_desc"><a href="mailto:info@wicketpickz.com"> info@wicketpickz.com
+                          </a></p>
+                        <p class="info_desc">By using Wicket Pickz, you acknowledge that you have read, understood, and agree to these Terms and Conditions. Thank you for being part of the Wicket Pickz community!
+                      </p>
+
+   
             </div>
 
         </div>

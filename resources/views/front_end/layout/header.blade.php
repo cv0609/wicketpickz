@@ -51,7 +51,7 @@
                      <div class="avatar-content">
                          <a href="#">
                              <div class="profile-image">
-                                 <img src="{{(!empty(Auth::user()->image)) ? asset(Auth::user()->image) : asset('assets/img/user.png') }}" alt="profile">
+                                 <img src="{{(!empty(Auth::user()->image)) ? asset(Auth::user()->image) : asset('assets/images/user.png') }}" alt="profile">
                              </div>
                              <span>{{ ucfirst(Auth::user()->name) }}</span>
                          </a>

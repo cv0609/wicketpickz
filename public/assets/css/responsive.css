@@ -5,19 +5,19 @@
   h1 {
     font-size: 62px;
   }
-  .basket_leagues-inner{
+
+  .basket_leagues-inner {
     margin-block: 70px;
-   }
-  .joinleagues {
-    padding: 30px;
   }
+
 
   .leagues-pages {
     height: 450px;
   }
+
   .login_signup_form {
     padding-block: 100px 80px;
-}
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -44,16 +44,19 @@
   h6 {
     font-size: 18px;
   }
-  .basket_leagues-inner{
-    margin-block:50px;
-   }
-  .section-padding { 
+
+  .basket_leagues-inner {
+    margin-block: 50px;
+  }
+
+  .section-padding {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
   .banner_desc {
     font-size: 16px;
-}
+  }
 
   .hero-section {
     padding-top: 148px;
@@ -74,13 +77,14 @@
     margin-bottom: 0;
   }
 
-  .navbar .custom-btn {   
+  .navbar .custom-btn {
     margin-bottom: 10px;
   }
 
   .booking-form {
     padding: 45px;
   }
+
   .contact-section .container {
     width: auto;
     margin-right: 10px;
@@ -92,10 +96,11 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
   .basket_leagues-inner h2 {
     font-size: 32px;
     margin-bottom: 48px;
-}
+  }
 }
 
 /* meadi qury 1024  */
@@ -103,52 +108,59 @@
   .matches_list {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .signup_inner {
     padding: 0px;
-}
-section.matches {
-  margin-bottom: 40px;
-}
-.form-container {
- padding: 8px;
-}
+  }
+
+  section.matches {
+    margin-bottom: 40px;
+  }
+
+  .form-container {
+    padding: 8px;
+  }
+
   .leagues_list {
     flex-wrap: wrap;
   }
-  .basket_leagues-inner{
-    margin-block:60px;
-   }
 
-  .leagues .leagues_item {
-    width: 100%;
-    max-width: 31%;
+  .basket_leagues-inner {
+    margin-block: 60px;
   }
+
+
 
   .leagues_inner {
     margin-block: 16px;
   }
+
   .leagues_headLogo {
     max-width: 120px;
-    height:120px;
+    height: 120px;
 
-}
+  }
+
   .match-details-items {
     flex-wrap: wrap;
   }
+
   .login_signup_form {
     padding-block: 100px 60px;
-}
+  }
 
   .match-details-items .leagues_item {
     max-width: 48%;
   }
+
   .basket_leagues-inner h2 {
     font-size: 28px;
     margin-bottom: 40px;
-}
-.my-matchesList .matches_item {
-  width: 48%;
-}
+  }
+
+  .my-matchesList .matches_item {
+    width: 48%;
+  }
 
 }
 
@@ -216,16 +228,19 @@ section.matches {
   .timeline::after {
     left: 31px;
   }
+
   .footer-title {
     margin-bottom: 14px;
     font-size: 20px;
-}
+  }
+
   .profile {
     margin-left: 0px;
   }
 
-  .banner,.leagues-pages {
-    height: 400px;
+  .banner,
+  .leagues-pages {
+    height: 500px;
   }
 
   .timeline-container {
@@ -249,28 +264,39 @@ section.matches {
   .timeline-container-right {
     left: 0%;
   }
+
   .back-btn a {
     padding: 4px 20px;
     margin: 0 0 18px;
   }
-  .back-btn a svg{
-     width: 20px;
-     height: 20px;
+
+  .back-btn a svg {
+    width: 20px;
+    height: 20px;
   }
+
   .contact_inner {
     flex-direction: column-reverse;
     padding: 8px;
-}
-.contact_inner .contact_left, .contact_right {
-  width: 100%;
-}
-.info_list {
-  margin-left: 5%;
-}
-.contact_leftImg{
-  height: 350px;
-  margin-bottom: 10px;
-}
+  }
+
+  .contact_inner .contact_left,
+  .contact_right {
+    width: 100%;
+  }
+
+  .info_list {
+    margin-left: 5%;
+  }
+
+  .contact_leftImg {
+    height: 350px;
+    margin-bottom: 10px;
+  }
+
+  .footer_link {
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 991px) {
@@ -304,6 +330,13 @@ section.matches {
     width: 49%;
     margin-bottom: 16px;
   }
+
+}
+
+@media screen and (max-width: 991px) {
+  .avatar .dropdown {
+    left: 100px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -311,26 +344,32 @@ section.matches {
     height: 40px;
     width: 110px;
   }
+
   #login-signup h3 {
-        font-size: 24px;
-      margin-bottom: 20px;
-   
-}
-section.matches {
-  margin-bottom: 32px;
-}
+    font-size: 24px;
+    margin-bottom: 20px;
+
+  }
+
+  section.matches {
+    margin-bottom: 32px;
+  }
+
   .leagues_headLogo {
     max-width: 100px;
     height: 100px;
 
-}
+  }
+
   .custom-btn {
     font-size: 14px;
     padding: 12px 20px;
   }
-  .basket_leagues-inner{
-    margin-block:40px;
-   }
+
+  .basket_leagues-inner {
+    margin-block: 40px;
+  }
+
   .info_heading {
     font-size: 20px;
   }
@@ -342,26 +381,29 @@ section.matches {
   .toggle-target a {
     width: 100%;
   }
+
   .toggle-target a {
     font-size: 16px;
     padding: 4px 16px;
-}
+  }
 
-  .banner,.leagues-pages {
-    height: 350px;
+  .banner,
+  .leagues-pages {
+    height: 450px;
   }
 
   .match-details-items .leagues_item {
     max-width: 100%;
   }
+
   .team-btns a {
     padding: 8px 24px;
     font-size: 12px;
-}
+  }
 
   .leagues .leagues_item {
     width: 100%;
-    max-width: 48%;
+    max-width: 100%;
   }
 
   .menu-block-wrap,
@@ -382,9 +424,11 @@ section.matches {
   .playingGuide_left {
     width: 100%;
   }
+
   .login_signup_form {
     padding-block: 100px 50px;
-}
+  }
+
   .playingGuide_img {
     height: 300px;
   }
@@ -393,8 +437,8 @@ section.matches {
     padding: 0px;
   }
 
-  .socials_wrapper {
-    justify-content: center;
+  .footer-left {
+    text-align: left;
   }
 
   .copyRight_wrapper {
@@ -405,24 +449,37 @@ section.matches {
   .logoLnkImg {
     margin-bottom: 20px;
   }
+
   .basket_leagues-inner h2 {
     font-size: 28px;
     margin-bottom: 28px;
-}
-.back-btn a {
-  padding: 4px 16px;
-  margin: 0 0 16px;
-}
-.back-btn a svg{
-   width: 18px;
-   height: 18px;
-}
-.team-view-header {
-  padding:16px
-}
-.my-matchesList .matches_item {
-  width: 100%;
-}
+  }
+
+  .back-btn a {
+    padding: 4px 16px;
+    margin: 0 0 16px;
+  }
+
+  .back-btn a svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .team-view-header {
+    padding: 16px
+  }
+
+  .my-matchesList .matches_item {
+    width: 100%;
+  }
+
+  .info_sec {
+    margin-block: 60px;
+  }
+
+  .doucment-type-wrapper {
+    padding: 16px;
+  }
 }
 
 
@@ -433,28 +490,37 @@ section.matches {
     margin-right: 10px;
     margin-left: 10px;
   }
+
   .team-view-header {
-    padding:8px
+    padding: 8px
   }
+
   .leagues_headLogo {
     max-width: 80px;
     height: 80px;
-}
-.info_list {
-  margin-left: 5%;
-}
-  .banner,.leagues-pages {
-    height: 300px;
   }
-  .basket_leagues-inner{
-    margin-block:32px;
-   }
+
+  .info_list {
+    margin-left: 5%;
+  }
+
+  .banner,
+  .leagues-pages {
+    height: 450px;
+  }
+
+  .basket_leagues-inner {
+    margin-block: 32px;
+  }
+
   .toggle-target {
     overflow: scroll;
   }
+
   .login_signup_form {
     padding-block: 100px 32px;
-}
+  }
+
   .leagues .leagues_item {
     width: 100%;
     max-width: 100%;
@@ -467,17 +533,39 @@ section.matches {
   .Matches_body {
     padding: 10px 8px;
   }
+
   .basket_leagues-inner h2 {
     font-size: 24px;
     margin-bottom: 20px;
-}
-.back-btn a {
-  padding: 4px 16px;
-  margin: 0 0 16px;
-}
-.back-btn a svg{
-   width: 16px;
-   height: 16px;
-}
+  }
 
+  .back-btn a {
+    padding: 4px 16px;
+    margin: 0 0 16px;
+  }
+
+  .back-btn a svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .banner_desc {
+    font-size: 14px;
+  }
+
+  .info_sec {
+    margin-block: 40px;
+  }
+
+  .navbar .container {
+    padding: 10px 20px;
+  }
+
+  .bannerLogin_wrapper {
+    padding: 24px;
+  }
+
+  .joinleagues h3 {
+    margin-bottom: 10px;
+  }
 }

@@ -40,7 +40,10 @@
 <section class="matches">
     <div class="container">
         <div class="matches_wrapper">
-            <div class="matches_inner">
+            <div class="matches_inner">  
+            <h2 class="leagues_heading pb-5 text-center">
+                Season 2025-26
+            </h2>
                 <ul class="matches_list">
                 @foreach ($matches as $key => $matche)
                 @php

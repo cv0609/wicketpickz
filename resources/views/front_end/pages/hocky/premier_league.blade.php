@@ -19,9 +19,12 @@
 </section>
 
 <!-- Leagues Content Section Start -->
-<section class="leagues">
+<section class="leagues py-5">
     <div class="container">
         <div class="leagues_wrapper">
+            <h2 class="leagues_heading pb-5 text-center">
+                Season 2025-26
+            </h2>
             <ul class="leagues_list">
             @foreach ($leagues as $key => $league)
                 <li class="leagues_item">

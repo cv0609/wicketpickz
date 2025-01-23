@@ -1,5 +1,5 @@
-    <!-- footer section -->
-    <footer class="site-footer">
+<!-- footer section -->
+<footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12 me-auto text-center pb-4">
@@ -13,35 +13,16 @@
                         this site.
                     </p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 me-auto text-center">
-                    <div class="footer-left">
+                <div class="col-lg-4 col-md-6  col-12  text-center">
+                    <div class="footer-left footer_blcks">
                         <a class="logoLnk">
                             <div class="logoLnkImg"></div>
                         </a>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 me-auto text-center">
-                    <h5 class="footer-title">Quick Link</h5>
-                    <ul class="footer-list">
-                        <li class="footer-item">
-                            <a href="{{ route('home') }}" class="footer_link">Home</a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ route('how-to-play') }}" class="footer_link">Playing Guide</a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ route('leagues') }}" class="footer_link">Play Now</a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ route('about-us') }}" class="footer_link">About</a>
-                        </li>
-                        <li class="footer-item">
-                            <a href="{{ route('contact-us') }}" class="footer_link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 me-auto text-center">
-                    <h5 class="footer-title">information Link</h5>
+                </div>              
+                <div class="col-lg-4 col-md-6 col-12">
+                   <div class="footer_blcks">
+                    <h5 class="footer-title">Quick Links</h5>
                     <ul class="footer-list">
                         <li class="footer-item">
                             <a href="{{ route('privacy') }}" class="footer_link">Privacy Policy
@@ -56,26 +37,29 @@
                         </li>
 
                     </ul>
+                    </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-12 me-auto text-center">
-                    <h5 class="footer-title">Social Link</h5>
+
+                <div class="col-lg-4 col-md-6 col-12">
+                  <div class="footer_blcks">
+                    <h5 class="footer-title">Social Tags</h5>
                     <div class="socials">
                         <div class="socials_wrapper">
-                            <a href="https://www.facebook.com/" target="__blank" class="social">
+                            <a href="https://www.facebook.com/" target="_blank" class="social">
                                 <div class="social-link social-link--fb"></div>
                             </a>
-                            <a href="https://www.instagram.com/" target="__blank" class="social ">
+                            <a href="https://www.instagram.com/" target="_blank" class="social ">
                                 <div class="social-link social-link--insta"></div>
                             </a>
-                            <a href="https://x.com/" target="__blank" class="social">
+                            <a href="https://x.com/" target="_blank" class="social">
                                 <div class="social-link social-link--twitter"></div>
                             </a>
-                            <a href="https://web.telegram.org/k/" target="__blank" class="social">
+                            <a href="https://web.telegram.org/k/" target="_blank" class="social">
                                 <div class="social-link social-link--telegram"></div>
                             </a>
-
                         </div>
                     </div>
+                   </div>
                 </div>
 
                 <div class="copyRight col-12 mt-4">

@@ -58,3 +58,22 @@ $(".profile").click(function () {
   $(this).find(".dropdown").slideToggle();
 });
 
+
+// Blogs Cards JS Start
+$(document).ready(function() {
+  $('.custom-blog-card').on('click', function() {
+    var $card = $(this);
+    var $toggleButton = $card.find('.toggle-button');
+    var $hiddenContent = $card.find('.hidden-content');    
+    $card.toggleClass('expanded');
+    if ($card.hasClass('expanded')) {
+      $hiddenContent.slideDown(500); 
+      $toggleButton.text('Read Less...');
+    } else {
+      $hiddenContent.slideUp(500); 
+      $toggleButton.text('Read More...');
+    }
+  });
+});
+// Blogs Cards JS End
+
