@@ -13,13 +13,13 @@
                           <span class="alert alert-success text-center" style="width: 746px;">{{ Session::get('success') }}</span>
                         @endif
                         <fieldset>
-                            <input placeholder="Name" type="text" name="name" tabindex="1" class="signup-input">
+                            <input placeholder="Enter Your Name" type="text" name="name" tabindex="1" class="signup-input">
                          @error('name')
                          <span class="text-danger">{{ $message }}</span>
                          @enderror
                         </fieldset>
                         <fieldset>
-                            <input placeholder="username" type="text" name="username" tabindex="1" class="signup-input">
+                            <input placeholder="Enter Username" type="text" name="username" tabindex="1" class="signup-input">
                             @error('username')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror

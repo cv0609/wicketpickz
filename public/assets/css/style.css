@@ -318,7 +318,7 @@ ul {
 .navbar {
   background: transparent;
   z-index: 999999;
-  padding-top: 30px;
+  padding-top: 0px;
   padding-bottom: 30px;
 }
 
@@ -968,9 +968,6 @@ ul {
 -----------------------------------------*/
 .site-footer {
   background-color: var(--black-color);
-  padding-top: 100px;
-  /* padding-bottom: 100px; */
-  padding-bottom: 30px;
 }
 
 .site-footer strong {
@@ -1002,8 +999,12 @@ ul {
 .copyright-text a {
   color: rgba(255, 200, 160, 0.75);
 }
-
-
+.site-footer .row .col-12:nth-child(2) {
+  border-top: 1px solid #393939;
+}
+.site-footer .row .col-12:nth-child(3) {
+  border-bottom: 1px solid #393939;
+}
 /*---------------------------------------
   SOCIAL ICON               
 -----------------------------------------*/
@@ -1068,17 +1069,19 @@ ul {
 -----------------------------------------*/
 
 .SignUp {
-  background-image: url("../images/signup-banner.jpg");
+  /* background-image: url("../images/signup-banner.jpg"); */
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 500px;
+  /* height: 500px; */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  background: linear-gradient(to right, #b78752, #7c5c52);
+  padding: 60px 0;
 }
 
 .SignUp::after {
@@ -1130,9 +1133,9 @@ ul {
 }
 
 .joinleagues {
-  padding: 150px 40px;
-background-color: rgba(0 0 0 / 65%);
-background-blend-mode: multiply;
+  padding: 100px 40px;
+  background-color: rgba(0 0 0 / 80%);
+  background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1201,22 +1204,17 @@ margin-bottom: 16px;
   background-image: url("../images/revert.png");
 }
 
-.socials_wrapper {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-}
 
 .social {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: #bc6c25 0px 3px 10px;
+  box-shadow: #777777 0px 1px 1px 1px;
   height: 50px;
   width: 50px;
   transition: 0.5s all ease-in-out;
+  margin-inline-end: 5px;
 }
 ul.footer-list li a {
   font-size: 1.1rem;
@@ -1226,7 +1224,15 @@ ul.footer-list li a {
   transform:translateY(-2px);
   background-color: var(--custom-btn-bg-hover-color);
 }
-
+.footer_blcks ul {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin: 20px auto;
+  max-width: 510px;
+  flex-wrap: wrap;
+  gap: 0 20px;
+}
 .social-link {
   height: 22px;
   width: 22px;
@@ -1275,9 +1281,6 @@ ul.footer-list li a {
   display: block;
 }
 
-.copyRight {
-  padding-top: 40px;
-}
 
 .footer-title {
   color: var(--white-color);
@@ -1599,29 +1602,14 @@ margin-right: 10px;
 
 .playingGuide_inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   padding: 20px;
   border-radius: 20px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   box-shadow: #DDA15E 0px 3px 8px;
-}
-
-.playingGuide_right {
-  width: 49%;
-}
-
-.playingGuide_left {
-  width: 49%;
-}
-
-.playingGuide_img {
-  border-radius: 2px;
-  width: 100%;
+  flex-direction: column-reverse;
   height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .playingGuide_inner--one .playingGuide_img {
@@ -1631,7 +1619,15 @@ margin-right: 10px;
   background-size: cover;
   background-position: center;
 }
-
+.playingGuide_img {
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 250px;
+}
 
 .playingGuide_inner--two .playingGuide_img {
   background:
@@ -1713,7 +1709,7 @@ margin-right: 10px;
 }
 
 .playingGuide_list {
-  margin-left: 6%;
+  margin-left: 16px;
 }
 
 .playingGuide_item, .playingGuide_subItem {
@@ -1740,8 +1736,9 @@ margin-right: 10px;
   color: var(--custom-btn-bg-color);
 }
 
-.row-reverse {
-  flex-direction: row-reverse;
+section.playingGuide .row {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /*---------------------------------------
@@ -5488,6 +5485,7 @@ li.team-member .match-team-logo img {
   width: 100%;
   background: linear-gradient(to right, #b78752, #7c5c52);
   backdrop-filter: blur(39px);
+  display: none;
 }
 
 .input_label {
@@ -6154,4 +6152,11 @@ section#barista-team {
 }
 .WhyChoose h2 {
   color: #BC6C25;
+}
+.copyRight p {
+  font-size: 1rem;
+  text-align: center;
+}
+.playingGuide .row .col-12 {
+  margin-bottom: 35px;
 }

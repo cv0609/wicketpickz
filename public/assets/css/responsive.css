@@ -80,11 +80,9 @@
   .navbar .custom-btn {
     margin-bottom: 10px;
   }
-
   .booking-form {
     padding: 45px;
   }
-
   .contact-section .container {
     width: auto;
     margin-right: 10px;
@@ -330,12 +328,14 @@
     width: 49%;
     margin-bottom: 16px;
   }
-
+html{
+  font-size: 15px;
+}
 }
 
 @media screen and (max-width: 991px) {
   .avatar .dropdown {
-    left: 100px;
+    left: 0px;
   }
 }
 
@@ -344,7 +344,9 @@
     height: 40px;
     width: 110px;
   }
-
+  html{
+    font-size: 14px;
+  }
   #login-signup h3 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -416,10 +418,7 @@
     padding: 24px;
   }
 
-  .playingGuide_inner {
-    flex-direction: column;
-  }
-
+ 
   .playingGuide_right,
   .playingGuide_left {
     width: 100%;
@@ -434,7 +433,7 @@
   }
 
   .playingGuide_content {
-    padding: 0px;
+    padding:20px 0;
   }
 
   .footer-left {
@@ -483,7 +482,7 @@
 }
 
 
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 575px) {
 
   .navbar .container,
   .sticky-wrapper.is-sticky .container {
@@ -567,5 +566,8 @@
 
   .joinleagues h3 {
     margin-bottom: 10px;
+  }
+  .footer_blcks ul {
+    justify-content: center;
   }
 }
