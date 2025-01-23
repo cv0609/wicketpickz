@@ -1607,7 +1607,7 @@ margin-right: 10px;
   border-radius: 20px;
   flex-wrap: wrap;
   margin-bottom: 35px;
-  box-shadow: #DDA15E 0px 3px 8px;
+  border: 1px solid #ddd;
   flex-direction: column-reverse;
   height: 100%;
 }
