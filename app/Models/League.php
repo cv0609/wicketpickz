@@ -25,6 +25,6 @@ class League extends Model
 
 
     public function leagueMatches(){
-        return $this->hasMany(Matche::class,'league_id','id');
+        return $this->hasMany(Matche::class,'league_id','league_id');
     } 
 }

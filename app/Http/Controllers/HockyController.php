@@ -24,7 +24,7 @@ class HockyController extends Controller
 
      public function leagues(){
     //   $leagues = League::whereHas('leagueMatches')->orderBy('start_date', 'desc')->get();
-      $leagues = League::orderBy('start_date','desc')->get();
+      $leagues = League::whereHas('leagueMatches')->orderBy('start_date','desc')->get();
       
       return view('front_end.pages.hocky.premier_league', compact('leagues'));
      }
@@ -46,27 +46,28 @@ class HockyController extends Controller
      public function matchDetails($matcheId)
       {
 
-        $matchDetails = Matche::with(['matchPlayers','league'])->where('id',$matcheId)->first();
+        // $matchDetails = Matche::with(['matchPlayers','league'])->first();
+        $matchDetails = Player::get();
+       
+        // $organizedPlayers = [
+        //     'Attacker' => [],
+        //     'Defender' => [],
+        //     'Midfielder' => [],
+        //     'Goalkeeper' => []
+        // ];
 
-        $organizedPlayers = [
-            'Attacker' => [],
-            'Defender' => [],
-            'Midfielder' => [],
-            'Goalkeeper' => []
-        ];
+        // if(isset($matchDetails->matchPlayers) && !empty($matchDetails->matchPlayers)){
 
-        if(isset($matchDetails->matchPlayers) && !empty($matchDetails->matchPlayers)){
+        //     foreach($matchDetails->matchPlayers as $player){
 
-            foreach($matchDetails->matchPlayers as $player){
+        //         if (isset($organizedPlayers[$player->position])) {
 
-                if (isset($organizedPlayers[$player->position])) {
+        //             $organizedPlayers[$player->position][] = $player;
+        //         }
+        //     }
+        // }
 
-                    $organizedPlayers[$player->position][] = $player;
-                }
-            }
-        }
-
-        return view('front_end.pages.hocky.premier_league_players',compact('matchDetails','organizedPlayers','matcheId'));
+        return view('front_end.pages.hocky.premier_league_players',compact('matchDetails'));
       }
 
 
