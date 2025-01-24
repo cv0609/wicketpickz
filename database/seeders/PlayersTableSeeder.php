@@ -1,4 +1,6 @@
 <?php
+namespace Database\Seeders;
+
 // database/seeders/PlayersTableSeeder.php
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
