@@ -49,7 +49,7 @@
              <div class="profile">
                  <div class="avatar">
                      <div class="avatar-content">
-                         <a href="#">
+                         <a href="javascript:void(0)">
                              <div class="profile-image">
                                  <img src="{{(!empty(Auth::user()->image)) ? asset(Auth::user()->image) : asset('assets/images/user.png') }}" alt="profile">
                              </div>
@@ -66,24 +66,21 @@
                              <li>
                                  <a href="{{ route('profile.profile') }}">
                                      <div class="profile-dropdown-options profile-image-dropdown">
-                                         <img src="assets/images/user.png">
+                                      <img src="{{(!empty(Auth::user()->image)) ? asset(Auth::user()->image) : asset('assets/images/user.png') }}" alt="profile"> 
                                      </div>
                                      My Profile
                                  </a>
                              </li>
                              <li>
                                  <a href="{{route('profile.matches')}}">
-                                     <div class="profile-dropdown-options profile-image-stadium"
-                                         style="background-image: url(assets/images/stadium.png);">
+                                     <div class="profile-dropdown-options profile-image-stadium" style="background-image: url(assets/images/stadium.png);" alt="matches">
                                      </div>
                                      My Matches
                                  </a>
                              </li>
                              <li>
                                  <a href="{{ route('logout') }}">
-                                     <div class="profile-dropdown-options profile-image-logout"
-                                         style="background-image: url(assets/images/shutdown.png);">
-
+                                     <div class="profile-dropdown-options profile-image-logout" style="background-image: url(assets/images/logout.png);" alt="logout">
                                      </div>
                                      Log Out
                                  </a>

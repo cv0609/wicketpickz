@@ -114,7 +114,7 @@ use Carbon\Carbon;
                     <h4 id="error-message"></h4>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ok</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>
@@ -141,7 +141,7 @@ use Carbon\Carbon;
                     <h4 id="success-message"></h4>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ok</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
                 </div>
             </div>
         </div>

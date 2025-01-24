@@ -369,9 +369,7 @@ ul {
 .navbar-nav .nav-link:hover {
   color: var(--secondary-color);
 } */
-.nav-link .active {
-  color: var(--secondary-color);
-}
+
 
 .navbar .dropdown-menu {
   background: var(--white-color);
@@ -2604,6 +2602,7 @@ fieldset {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   filter: invert(1);
+  margin-top: -2px;
 }
 
 .fusball_leagues table {
@@ -3298,11 +3297,14 @@ table tr {
 
 .matches-detail .toggle-target {
   margin-top: 40px;
-  max-width: 90%;
-
+  max-width: 100%;
   width: 100%;
+  margin-bottom: 15px;
 }
-
+.matches-details .match-details-items{
+  justify-content: center;
+  gap:  0 20px ;
+}
 .credits_points button {
   border-radius: 50%;
   background: transparent;
@@ -3463,7 +3465,7 @@ div#mySidenavs {
   display: flex;
   width: 100%;
   margin-inline: auto;
-  max-width: 700px;
+  max-width: 550px;
   flex-direction: column;
   background-color: var(--white-color);
   border-radius: 8px;
@@ -4302,6 +4304,9 @@ fieldset {
 .nav-link.active{
  color:  var(--custom-btn-bg-color);
 }
+.nav-link:hover {
+  color:  var(--custom-btn-bg-color);
+}
 /* ==================== */
 
 
@@ -5089,7 +5094,7 @@ td.player-dp img {
 
 .team-btns {
   text-align: center;
-  margin: 20px 0 0;
+  margin: 40px 0 0;
 }
 
 .next-btn {
@@ -5555,6 +5560,7 @@ li.team-member .match-team-logo img {
 }
 h2.leagues_heading {
   font-size: 30px;
+  color: #DDA15E;
 }
 
 .leagues_headLogo {
@@ -6036,7 +6042,7 @@ h2.leagues_heading {
 
 .dropdown ul li a {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -6158,4 +6164,18 @@ section#barista-team {
 }
 .playingGuide .row .col-12 {
   margin-bottom: 35px;
+}
+.WhyChoose-content p {
+  font-size: 1.1rem;
+}
+.matches-detail .match-details-items {
+  display: flex;
+  justify-content: center;
+  gap: 0 20px;
+}
+.matches-detail {
+  margin-bottom: 60px;
+}
+.col-sec form {
+  text-align: center;
 }
