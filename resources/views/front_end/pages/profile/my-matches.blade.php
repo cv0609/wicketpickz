@@ -32,7 +32,7 @@
 
 
             <div class="ice-leagues-inner">
-                <h2>Mes matchs</h2>
+                <h2> My Matches</h2>
 
                 <!-- Content -->
                 <div class="ice-leagues-inner-content">

@@ -33,7 +33,7 @@
                 @csrf
                 <label class="input_label">
                     Email
-                    <input class="bannerLogin_input"type="Email" name="email" placeholder="Enter Your Email">
+                    <input class="bannerLogin_input" type="Email" name="email" placeholder="Enter Your Email">
                     @error('email')
                             <span class="text-danger">{{ $message }}</span>
                     @enderror  
@@ -155,12 +155,12 @@
             <div class="custom-blog-cards-wrap m-0-auto">
 
                 <div class="row">
-<div class="col-12">
-    <h2 class="text-center pb-5 text-white">
-    Latest from our scouts
-    </h2>
-</div>
-                    <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="col-12">
+                       <h2 class="text-center pb-5 text-white">
+                          Latest from our scouts
+                      </h2>
+                      </div>
+                      <div class="col-lg-4 col-md-6 mb-4">
                         <div class="custom-blog-card">
                             <div class="custom-blog-card-image custom-blog-card1 bg-center bg-no-repeat" style="background-image:url(assets/images/blog-image1.jpg);"></div>
                             <div class="custom-blog-card-content">
@@ -222,108 +222,19 @@
                     </div>    
 
                 </div>
+
             </div>
         </div>
     </section>
     <!-- Blogs Cards Section End -->
-
-<!-- Latest section -->
-<section class="reviews-section section-padding section-bg" id="section_4">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
-                <h2 class="text-white">Latest from our scouts
-                </h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-container timeline-container-left timeline-container--one">
-                    <a href="playing-guide.html" class="timeline-content">
-                        <div class="reviews-block">
-                            <div class="reviews-block-image-wrap d-flex align-items-center">
-                            <div class="custom-blog-card">
-                               <div class="custom-blog-card-image custom-blog-card1 bg-center bg-cover bg-no-repeat"></div>
-                                  <div class="custom-blog-card-content">
-                                   <h3>
-                                    The Ultimate Fantasy Football Draft Strategy: How to Build a Winning Team
-                                   </h3>
-                                   <p>
-                                    Drafting your fantasy football team is the most important part of your season, but
-                                    it can be a daunting task. With so many players, strategies, and scenarios to                            
-                                  </p>
-                                <div class="hidden-content">
-                                    <p>
-                                        Start by researching player rankings, but remember that rankings are just a
-                                        starting point.
-                                        You’ll need to take into account factors like player consistency, injury
-                                        history, and team
-                                        changes. The key to success is finding the right balance of star players and
-                                        solid depth
-                                        throughout your roster. Understanding different draft formats, such as snake
-                                        drafts and
-                                        auction drafts, is also essential.
-                                    </p>
-                                    <p>
-                                        In snake drafts, you’ll want to prioritize securing your core players
-                                        early—think running backs
-                                        and wide receivers—while finding value in the later rounds for positions like
-                                        quarterback and
-                                        tight end. Auction drafts, on the other hand, require you to balance your budget
-                                        across all
-                                        positions, allowing you to “buy” your ideal team.
-                                    </p>
-                                    <p>
-                                        Lastly, don't forget to have a strategy for each round. Whether you’re targeting
-                                        value picks or
-                                        making safe choices, adaptability and preparation will help you thrive. A great
-                                        draft is the
-                                        foundation of a championship season, so plan carefully!
-                                    </p>
-                                </div>
-                                <button class="toggle-button">Read More...</button>
-                            </div>
-                        </div>
-
-                            </div>
-
-
-                        </div>
-                    </a>
-                </div>
-                <div class="timeline-container timeline-container-right timeline-container--two">
-                    <a href="playing-guide.html" class="timeline-content">
-                        <div class="reviews-block">
-                            <div class="reviews-block-image-wrap d-flex align-items-center">
-                                <div class="reviews-block-image-wrap-image">
-
-                                </div>
-
-                            </div>
-
-
-                        </div>
-                    </a>
-                </div>
-                <div class="timeline-container timeline-container-left timeline-container--three">
-                    <a href="playing-guide.html" class="timeline-content">
-                        <div class="reviews-block">
-                            <div class="reviews-block-image-wrap d-flex align-items-center">
-                                <div class="reviews-block-image-wrap-image">
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- why shoose section -->
 <section class="WhyChoose py-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-12 text-center mb-4 pb-lg-2">
-                <h2 class="">Why Choose Us?
+                <h2 >
+                    Why Choose Us?
                 </h2>
             </div>
 

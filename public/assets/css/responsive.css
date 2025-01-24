@@ -70,6 +70,7 @@
 
   .navbar-expand-lg .navbar-nav {
     padding-bottom: 20px;
+    margin-top: 25px;
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -335,8 +336,10 @@ html{
 
 @media screen and (max-width: 991px) {
   .avatar .dropdown {
-    left: 0px;
-  }
+    position: static;
+    margin-top: 10px;
+}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -539,9 +542,9 @@ html{
   }
 
   .back-btn a {
-    padding: 4px 16px;
+    padding: 7px 20px;
     margin: 0 0 16px;
-  }
+}
 
   .back-btn a svg {
     width: 16px;
@@ -558,6 +561,7 @@ html{
 
   .navbar .container {
     padding: 10px 20px;
+    height: 90vh;
   }
 
   .bannerLogin_wrapper {
