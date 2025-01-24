@@ -21,7 +21,7 @@
 </section>
 <!--Leagues Pages Banner Section End -->
 <!-- Leagues Content Section Start -->
-<div class="basket_leagues matches-detail">
+<div class="basket_leagues matches-detail py-5">
     <div class="container">
         <div class="basket_leagues-inner">
             <div class="back-btn">

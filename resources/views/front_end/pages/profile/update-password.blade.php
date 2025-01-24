@@ -35,17 +35,16 @@
                                 <form action="{{ route('profile.update.password') }}" method="POST" class="mt-60 ">
                                      @csrf
                                     <div class="row">
-                                        <div class="mb-3 col-sm-6">
+                                        <div class="mb-3 col-12">
 
                                             <input type="password" placeholder="Current Password"
                                                 class="form-control para" id="con_password" name="current_password">
                                             @error("current_password")
                                             <span class="text-danger">{{ $message }}</span>
-                                            @enderror>
-
+                                            @enderror
                                         </div>
 
-                                        <div class="mb-3 col-sm-6">
+                                        <div class="mb-3 col-12">
                                             <div class="show_password">
 
                                                 <input type="password" placeholder="New Password"
@@ -56,7 +55,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="mb-3 col-sm-6">
+                                        <div class="mb-3 col-12">
 
                                             <input type="password" placeholder="Confirm Password"
                                                 class="form-control para" id="con_password"

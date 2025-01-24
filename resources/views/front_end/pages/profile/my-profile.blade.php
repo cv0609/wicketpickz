@@ -8,7 +8,7 @@
             <ul class="leagues-ul">
                 <li class="inline-list home-list">
                     <h3>
-                        <a href="{{ route('home') }}">Homepage</a>
+                        <a href="{{ route('home') }}">Home</a>
                     </h3>
                 </li>
                 <li class="inline-list next-page-list">
@@ -36,15 +36,15 @@
                                 <form action="{{ route('profile.update') }}" method="POST" class="mt-60 ">
                                     @csrf
                                     <div class="row">
-                                        <div class="mb-3 col-sm-6">
+                                        <div class="mb-3 col-sm-12">
                                             <input type="text" placeholder="Name" class="form-control para" id="name"
                                             name="name" value="{{Auth::user()->name}}">
                                         </div>
-                                        <div class="mb-3 col-sm-6">
+                                        <div class="mb-3 col-sm-12">
                                             <input type="text" placeholder="Username" class="form-control para"
                                                 id="last-name" name="username" autocomplete="off" value="{{Auth::user()->username}}">
                                         </div>
-                                        <div class="mb-3 col-sm-6">
+                                        <div class="mb-3 col-sm-12">
                                             <input type="email" placeholder="E-mail" class="form-control para"
                                                 id="email" name="email" value="{{Auth::user()->email}}">
                                         </div>
