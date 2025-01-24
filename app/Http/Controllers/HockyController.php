@@ -24,9 +24,7 @@ class HockyController extends Controller
 
      public function leagues(){
     //   $leagues = League::whereHas('leagueMatches')->orderBy('start_date', 'desc')->get();
-      $leagues = League::whereHas('leagueMatches', function ($query) {
-        $query->whereHas('matchPlayers');
-      })->orderBy('start_date','desc')->get();
+      $leagues = League::whereHas('leagueMatches')->orderBy('start_date','desc')->get();
       
       return view('front_end.pages.hocky.premier_league', compact('leagues'));
      }

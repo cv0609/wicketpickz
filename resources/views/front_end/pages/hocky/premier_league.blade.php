@@ -28,7 +28,7 @@
             <ul class="leagues_list">
             @foreach ($leagues as $key => $league)
                 <li class="leagues_item">
-                    <a href="{{ route('leagueMatches',['leagueId'=>$league->id]) }}" class="leagues_inner">
+                    <a href="{{ route('leagueMatches',['leagueId'=>$league->league_id]) }}" class="leagues_inner">
                         <div class="leagues_head">
                             <div class="leagues_headLogo">
                                 <img src="{{ $league->logo }}" alt="">
