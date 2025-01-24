@@ -24,7 +24,7 @@ class HockyController extends Controller
 
      public function leagues(){
     //   $leagues = League::whereHas('leagueMatches')->orderBy('start_date', 'desc')->get();
-      $leagues = League::whereHas('leagueMatches')->orderBy('start_date','desc')->get();
+      $leagues = League::orderBy('start_date','desc')->get();
       
       return view('front_end.pages.hocky.premier_league', compact('leagues'));
      }
@@ -32,7 +32,7 @@ class HockyController extends Controller
      public function getLeagueMatches($leagueId)
      {
         $matches = Matche::getMatchByLeagueId($leagueId);
-
+      
         if(isset($matches) && !empty($matches))
          {
             return view('front_end.pages.hocky.matches',compact('matches'));
