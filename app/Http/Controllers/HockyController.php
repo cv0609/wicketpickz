@@ -47,7 +47,8 @@ class HockyController extends Controller
       {
 
         // $matchDetails = Matche::with(['matchPlayers','league'])->first();
-        $matchDetails = Player::get();
+        $matchDetails = Matche::where('match_id',$matcheId)->first();
+        $players = Player::get();
        
         // $organizedPlayers = [
         //     'Attacker' => [],
@@ -67,7 +68,7 @@ class HockyController extends Controller
         //     }
         // }
 
-        return view('front_end.pages.hocky.premier_league_players',compact('matchDetails'));
+        return view('front_end.pages.hocky.premier_league_players',compact('matchDetails','players'));
       }
 
 
