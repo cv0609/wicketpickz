@@ -30,7 +30,6 @@
                     </svg>
                 </a>
             </div>
-            <h2 class="text-center">{{ date('Y').'-'.(date('Y') - 1) }} Season</h2>
 
         </div>
     </div>
@@ -41,9 +40,8 @@
     <div class="container">
         <div class="matches_wrapper">
             <div class="matches_inner">  
-            <h2 class="leagues_heading pb-5 text-center">
-                Season 2025-26
-            </h2>
+                <h2 class="text-center">{{ date('Y').'-'.(date('Y') + 1) }} Season</h2>
+
                 <ul class="matches_list">
                 @foreach ($matches as $key => $matche)
                 @php

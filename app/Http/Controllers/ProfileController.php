@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UpdateProfile;
 use App\Http\Requests\UpdatePassword;
+use App\Models\League;
 use App\Services\ApiHockyService;
 use App\Models\User;
 use App\Models\Team;
@@ -74,6 +75,7 @@ class ProfileController extends Controller
         $teams = Team::whereHas('teamDetails', function($query) use ($userId) {
             $query->where('user_id', $userId);
         })->get();
+
         
         $matches = [];
 
@@ -81,33 +83,34 @@ class ProfileController extends Controller
 
             foreach($teams as $val){
                 
-                $matchDetails = Matche::with('league')->where('fixture_id',$val->match_id)->first();
+                $matchDetails = Matche::with('league')->where('id',$val->match_id)->first();
 
                 if(isset($matchDetails) && !empty($matchDetails)) {
                     $matches[] = $matchDetails;
                 }
             }
         }
+
         return view('front_end.pages.profile.my-matches', compact('matches'));
     }
 
 
-    public function matchDetails($leagueId,$matchId)
+    public function matchDetails($leagueId, $matchId)
     {
-        $teams = Team::whereHas('teamDetails', function($query) use ($leagueId,$matchId) {
-            $query->where('league_id', $leagueId);
+        $teams = Team::whereHas('teamDetails', function($query) use ($leagueId, $matchId) {
+            // $query->where('league_id', $leagueId);
             $query->where('match_id', $matchId);
         })->with('teamDetails')->get();
-
-        $matchDetails = Matche::with('league')->where('fixture_id',$matchId)->first();
-
-        if(isset($matchDetails) && !empty($matchDetails)){
-            $matchDetails = $matchDetails;
-        }else{
+    
+        $matchDetails = Matche::with('league')->where('id', $matchId)->first();
+        $leagues = League::find($leagueId); // Better way to get league
+    
+        if (!$matchDetails) {
             $matchDetails = [];
         }
-
-        return view('front_end.pages.profile.match-details',compact('matchDetails','leagueId','matchId','teams'));
+    
+        return view('front_end.pages.profile.match-details', compact('teams', 'matchDetails', 'leagueId', 'leagues'));
     }
+    
 
 }

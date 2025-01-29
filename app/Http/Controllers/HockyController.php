@@ -11,6 +11,7 @@ use App\Models\Team;
 use App\Services\ApiHockyService;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Carbon;
 
 class HockyController extends Controller
 {
@@ -22,73 +23,71 @@ class HockyController extends Controller
         $this->ApiHockyService = $ApiHockyService;
     }
 
-     public function leagues(){
-    //   $leagues = League::whereHas('leagueMatches')->orderBy('start_date', 'desc')->get();
-      $leagues = League::whereHas('leagueMatches')->orderBy('start_date','desc')->get();
-      
-      return view('front_end.pages.hocky.premier_league', compact('leagues'));
-     }
+    public function leagues()
+    {
+        //   $leagues = League::whereHas('leagueMatches')->orderBy('start_date', 'desc')->get();
+        $leagues = League::whereHas('leagueMatches')->orderBy('start_date', 'desc')->get();
 
-     public function getLeagueMatches($leagueId)
-     {
-        $matches = Matche::getMatchByLeagueId($leagueId);
-      
-        if(isset($matches) && !empty($matches))
-         {
-            return view('front_end.pages.hocky.matches',compact('matches'));
-         }
-         else
-         {
-            return redirect()->back()->with('error','No matches found in this league.');
-         }
-     }
-
-     public function matchDetails($matcheId)
-      {
-
-        // $matchDetails = Matche::with(['matchPlayers','league'])->first();
-        $matchDetails = Matche::where('match_id',$matcheId)->first();
-        $players = Player::get();
-       
-        // $organizedPlayers = [
-        //     'Attacker' => [],
-        //     'Defender' => [],
-        //     'Midfielder' => [],
-        //     'Goalkeeper' => []
-        // ];
-
-        // if(isset($matchDetails->matchPlayers) && !empty($matchDetails->matchPlayers)){
-
-        //     foreach($matchDetails->matchPlayers as $player){
-
-        //         if (isset($organizedPlayers[$player->position])) {
-
-        //             $organizedPlayers[$player->position][] = $player;
-        //         }
-        //     }
-        // }
-
-        return view('front_end.pages.hocky.premier_league_players',compact('matchDetails','players'));
-      }
-
-
-      public function viewTeam(){
-     
-        $myTeam = [];
-        if(Session::has('myTeam')){
-            $myTeam = Session::get('myTeam', []);
-        }
-       
-        return view('front_end.pages.hocky.team-view',compact('myTeam'));
+        return view('front_end.pages.hocky.premier_league', compact('leagues'));
     }
 
-    public function currentTeamCount(){
+    public function getLeagueMatches($leagueId)
+    {
+        if(Session::has('myTeam')){
+            Session::forget('myTeam');
+        }
+
+        $matches = Matche::getMatchByLeagueId($leagueId);
+
+        if (isset($matches) && !empty($matches)) {
+            return view('front_end.pages.hocky.matches', compact('matches'));
+        } else {
+            return redirect()->back()->with('error', 'No matches found in this league.');
+        }
+    }
+
+    public function matchDetails($matcheId)
+    {
+
+        $matchDetails = Matche::with(['league'])->where('id', $matcheId)->first();
+        $matchPlayers =  [];
+        // $matchPlayers = Player::all();
+        $matchPlayers = Player::all()->shuffle()->take(14);
+
+        // dd($matchDetails);
+        $leagues =  [];
+
+        // Check if matchDetails exists
+        if ($matchDetails) {
+            // Check if league relationship is not null (single object, not a collection)
+            if ($matchDetails->league) {
+                $leagues = $matchDetails->league;
+            }
+        }
+        return view('front_end.pages.hocky.premier_league_players', compact('matchDetails', 'matchPlayers', 'leagues'));
+    }
+
+
+    public function viewTeam()
+    {
+
+        $myTeam = [];
+        if (Session::has('myTeam')) {
+            $myTeam = Session::get('myTeam', []);
+        }
+
+        return view('front_end.pages.hocky.team-view', compact('myTeam'));
+    }
+
+    public function currentTeamCount()
+    {
         $count = $this->ApiHockyService->getCurrentTeamCount();
         $response = ['success' => true, 'count' => $count];
         return response()->json($response);
     }
 
-    public function AuthCheck(){
+    public function AuthCheck()
+    {
         $authCheck = false;
         $myTeam = Session::get('myTeam', []);
 
@@ -109,22 +108,23 @@ class HockyController extends Controller
             }
         }
 
-        if(Auth::check()){
+        if (Auth::check()) {
             $authCheck = true;
         }
 
         return response()->json([
-            'captain' => $captainMissing,
-            'vice_captain' => $viceCaptainMissing,
+            'captain' => true,
+            'vice_captain' => true,
             'error' => $authCheck,
             'myTeam' => $myTeam
         ]);
     }
 
 
-    public function saveTeam(){
+    public function saveTeam()
+    {
 
-        if(Session::has('myTeam')){
+        if (Session::has('myTeam')) {
             $myTeam = Session::get('myTeam', []);
 
             $count = count($myTeam);
@@ -136,39 +136,52 @@ class HockyController extends Controller
 
                 $team_number = Team::generateTeamNumber();
 
-                $teamData = Team::create(['team_number' => $team_number,'league_id' =>$league_id,'match_id' =>$match_id]);
+                $teamData = Team::create(['team_number' => $team_number, 'league_id' => $league_id, 'match_id' => $match_id]);
 
-                if(isset($teamData)){
-                    foreach($myTeam as $team){
+                if (isset($teamData)) {
+                    foreach ($myTeam as $team) {
 
                         $is_captain = '0';
                         $is_vice_captain = '0';
 
-                        if($team['is_captain'] == '1'){
+                        if ($team['is_captain'] == '1') {
                             $is_captain = '1';
                         }
 
-                        if($team['is_vice_captain'] == '1'){
+                        if ($team['is_vice_captain'] == '1') {
                             $is_vice_captain = '1';
                         }
 
-                        $teamDetail = TeamDetail::create(['player_id' => $team['player_id'],'player_team_id' => $team['team_id'],'player_pos' =>$team['player_role'],'player_name' =>$team['player_name'],'player_team_name' => $team['team_name'],'player_team_logo' =>$team['team_logo'],'is_captain' => $is_captain,'is_vice_captain' => $is_vice_captain]);
+                        $teamDetail = TeamDetail::create([
+                            'player_id' => '1',
+                            'player_team_id' => '1',
+                            'player_pos' => $team['player_role'],
+                            'player_name' => $team['player_name'],
+                            'player_team_name' => $team['team_name'] ?? null, // Ensure a valid value
+                            'player_team_logo' => $team['team_logo'],
+                            'is_captain' => '1',
+                            'is_vice_captain' => '1',
+                            'created_at' => Carbon::now(),
+                            'updated_at' => Carbon::now()
+                        ]);
 
-                        $teamData->teamDetails()->attach($teamDetail->id,['user_id' => Auth::user()->id]);
+                        $teamData->teamDetails()->attach($teamDetail->id, ['user_id' => Auth::user()->id]);
                     }
                 }
 
                 Session::forget(['myTeam']);
 
-                return redirect()->route('leagues')->with('success','Team added successfully.');
+                return redirect()->route('leagues')->with(['success' => true, 'message' => 'Team added successfully.']);
+
             }
-        }else{
-            return redirect()->back()->with('error','Some thing went wrong');
+        } else {
+            return redirect()->back()->with('error', 'Some thing went wrong');
         }
     }
 
-    public function createTeam(Request $request){
-
+    public function createTeam(Request $request)
+    {
+        // \Log::info(Session::forget('myTeam'));
         $team_id = $request->team_id;
         $player_id = $request->player_id;
         $player_role = $request->player_role;
@@ -180,12 +193,12 @@ class HockyController extends Controller
         $homeTeamId = $request->homeTeamId;
         $awayTeamId = $request->awayTeamId;
         $dbMatchId = $request->dbMatchId;
+        $myTeam = [];
 
-        if(isset($request->event) && $request->event == "plus")
-          {
-            $validationMsg = LeagueTeamPlayerValidation($team_id, $player_id, $player_role,$leagueId,$player_name);
+        if (isset($request->event) && $request->event == "plus") {
+            $validationMsg = LeagueTeamPlayerValidation($team_id, $player_id, $player_role, $leagueId, $player_name);
 
-            if(isset($validationMsg) && $validationMsg['success'] == true){
+            if (isset($validationMsg) && $validationMsg['success'] == true) {
 
                 $myTeam = Session::get('myTeam', []);
 
@@ -204,36 +217,35 @@ class HockyController extends Controller
                     'awayTeamId' => $awayTeamId,
                     'dbMatchId' => $dbMatchId,
                 ];
-
                 Session::put('myTeam', $myTeam);
             }
             return response()->json($validationMsg);
-          }
-        elseif(isset($request->event) && $request->event == "minus")
-         {
+        } elseif (isset($request->event) && $request->event == "minus") {
             $myTeam = Session::get('myTeam', []);
 
             $playerExists = false;
 
             foreach ($myTeam as $player) {
-                if ($player['team_id'] == $team_id &&
-                    $player['player_id'] == $player_id &&
+                if (
+                    // $player['team_id'] == $team_id &&
+                    // $player['player_id'] == $player_id &&
                     $player['player_role'] == $player_role &&
                     $player['league_id'] == $leagueId &&
-                    $player['player_name'] == $player_name) {
+                    $player['player_name'] == $player_name
+                ) {
                     $playerExists = true;
                     break;
                 }
             }
 
             if (!$playerExists) {
-               $response = ['success' => false, 'message' => 'Player not found in the team.'];
+                $response = ['success' => false, 'message' => 'Player not found in the team.'];
             }
 
-            $myTeam = array_filter($myTeam, function($player) use ($team_id, $player_id, $player_role, $leagueId, $player_name) {
+            $myTeam = array_filter($myTeam, function ($player) use ($team_id, $player_id, $player_role, $leagueId, $player_name) {
                 return !(
-                    $player['team_id'] == $team_id &&
-                    $player['player_id'] == $player_id &&
+                    // $player['team_id'] == $team_id &&
+                    // $player['player_id'] == $player_id &&
                     $player['player_role'] == $player_role &&
                     $player['league_id'] == $leagueId &&
                     $player['player_name'] == $player_name
@@ -247,14 +259,13 @@ class HockyController extends Controller
             $response = ['success' => true, 'message' => 'Player removed successfully'];
 
             return response()->json($response);
-         }
-
+        }
     }
 
     public function makeCaptain(Request $request)
     {
         $event = $request->input('event');
-        $credentials = $request->only(['league_id', 'match_id', 'team_id', 'player_id']);
+        $credentials = $request->only(['league_id', 'match_id']);
 
         $myTeam = Session::get('myTeam', []);
         $updated = false;
@@ -274,14 +285,11 @@ class HockyController extends Controller
         }
 
         foreach ($myTeam as &$player) {
-            if (
-                $player['league_id'] == $credentials['league_id'] &&
-                $player['match_id'] == $credentials['match_id'] &&
-                $player['team_id'] == $credentials['team_id'] &&
-                $player['player_id'] == $credentials['player_id']
-            ) {
+            if ($player['league_id'] == $credentials['league_id'] && $player['match_id'] == $credentials['match_id']) {
                 if ($event == 'cap_plus') {
+                  
                     if (!$captainExists && $player['is_captain'] == '0') {
+                        
                         $player['is_captain'] = '1';
                         $player['already_captain'] = true;
                         $captainExists = true;

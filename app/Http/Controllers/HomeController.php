@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $leagues = League::whereHas('leagueMatches', function ($query) {
-            $query->whereHas('matchPlayers');
+            // $query->whereHas('matchPlayers');
            })->orderBy('start_date','desc')->limit(25)->get();
 
         return view('front_end.pages.home',compact('leagues'));
