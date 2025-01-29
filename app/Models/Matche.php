@@ -40,7 +40,7 @@ class Matche extends Model
     
     public function matchPlayers()
     {
-        return $this->hasMany(Player::class);
+        return $this->hasMany(Player::class,'match_id','id');
     }
 
 }
