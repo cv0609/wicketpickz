@@ -97,14 +97,14 @@
                              </li>
                              <li>
                                  <a href="{{route('profile.matches')}}">
-                                     <div class="profile-dropdown-options profile-image-stadium" style="background-image: url(assets/images/stadium.png);" alt="matches">
+                                     <div class="profile-dropdown-options profile-image-stadium" style="background-image: url('{{ asset('assets/images/stadium.png') }}');" alt="matches">
                                      </div>
                                      My Matches
                                  </a>
                              </li>
                              <li>
                                  <a href="{{ route('logout') }}">
-                                     <div class="profile-dropdown-options profile-image-logout" style="background-image: url(assets/images/logout.png);" alt="logout">
+                                     <div class="profile-dropdown-options profile-image-logout" style="background-image: url('{{ asset('assets/images/logout.png') }}');" alt="logout">
                                      </div>
                                      Log Out
                                  </a>
