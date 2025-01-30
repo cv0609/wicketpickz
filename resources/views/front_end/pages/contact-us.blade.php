@@ -45,25 +45,41 @@
                                 For your convenience, we also offer a simple contact form. Just fill out the
                                 following details, and we’ll get back to you shortly:
                             </p>
-                            <form class="contact_form">
+                            @if(Session::has('success'))
+                                <span class="text-center" style="color: green">{{ Session::get('success') }}</span>
+                            @endif
+                            <form class="contact_form" action="{{ route('contact.save') }}" method="post" id="contactForm">
+                                @csrf
                                 <label class="contact_label">
                                     Your Name
-                                    <input class="contact_input" type="text" placeholder="Your Name">
+                                    <input class="contact_input" name="name" id="name" type="text" value="{{ old('name') }}" placeholder="Your Name">
+                                    <p class="text-danger d-none" id="nameError"></p>
                                 </label>
                                 <label class="contact_label">
                                     Email Address
-                                    <input class="contact_input" type="email" placeholder="Email Address">
+                                    <input class="contact_input" type="email" placeholder="Email Address" name="email" id="email" value="{{ old('email') }}">
+                                   
+                                    <p class="text-danger d-none" id="emailError"></p>
                                 </label>
                                 <label class="contact_label">
                                     Subject
                                     <input class="contact_input" type="text"
-                                        placeholder="Subject">
+                                        placeholder="Subject" name="subject" id="subject" value="{{ old('subject') }}">
+                                    <p class="text-danger d-none" id="subjectError"></p>
                                 </label>
                                 <label class="contact_label">
                                     Message
-                                    <textarea class="input_textarea" placeholder="Message"></textarea>
+                                    <textarea class="input_textarea" placeholder="Message" name="message" id="message">{{ old('message') }}</textarea>
+
+                                    <p class="text-danger d-none" id="messageError"></p>
                                 </label>
-                                <input class="custom-btn contact_btn" type="submit" value="Submit">
+                                <div class="g-recaptcha" data-sitekey={{env('RECAPTCHA_SITE_KEY')}}></div>
+
+                                @error('g-recaptcha-response')
+                                 <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                                <button type="button" id="contact-btn" class="custom-btn contact_btn">Submit</button>
+                                {{-- <input class="custom-btn contact_btn" type="button" value="Submit"> --}}
                             </form>
                        <p class="mt-3">
                     Simply submit the form on our website, and our support team will reach out as soon as possible.
@@ -111,5 +127,65 @@
     </div>
 
 </section>
+
+@endsection
+
+
+@section('custom-script')
+
+<script>
+    $(document).ready(function () {
+        // var response = 'You have to complete the CAPTCHA.';
+        // @if($errors->has('g-recaptcha-response'))
+        //     $('#captchaModal').modal('show');
+        //     $('#cap-message').text(response);
+        // @endif
+
+
+        $('#contact-btn').on('click', function() {
+            var valid = true;
+
+            $('.text-danger').addClass('d-none').css('font-size','15px');
+
+            if ($('#name').val().trim() === '') {
+                $('#nameError').removeClass('d-none').text('Full name field is required.');
+                valid = false;
+            }
+
+            var email = $('#email').val().trim();
+            
+            if($('#email').val().trim() === ''){
+                $('#emailError').removeClass('d-none').text('Email field is required.');
+                valid = false;
+            }
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if ($('#email').val().trim() != '' && !emailPattern.test(email)) {
+                $('#emailError').removeClass('d-none').text('Please enter a valid email address.');
+                valid = false;
+            }
+
+            if ($('#subject').val().trim() === '') {
+                $('#subjectError').removeClass('d-none').text('Subject field is required.');
+                valid = false;
+            }
+
+            if ($('#message').val().trim() === '') {
+                $('#messageError').removeClass('d-none').text('Message field is required.');
+                valid = false;
+            }
+            var recaptchaResponse = grecaptcha.getResponse();
+            if (recaptchaResponse.length === 0) {
+                $('.g-recaptcha').after('<p class="text-danger">Please complete the reCAPTCHA.</p>');
+                valid = false;
+            }
+
+            if (valid) {
+                $('#contactForm').submit();
+            }
+        });
+    });
+</script>
+
 
 @endsection
