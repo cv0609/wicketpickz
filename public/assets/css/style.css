@@ -997,12 +997,15 @@ ul {
 .copyright-text a {
   color: rgba(255, 200, 160, 0.75);
 }
+
 .site-footer .row .col-12:nth-child(2) {
   border-top: 1px solid #393939;
 }
+
 .site-footer .row .col-12:nth-child(3) {
   border-bottom: 1px solid #393939;
 }
+
 /*---------------------------------------
   SOCIAL ICON               
 -----------------------------------------*/
@@ -1139,8 +1142,9 @@ ul {
   background-repeat: no-repeat;
   background-image: url(../images/home_leagues_bg.jpg);
 }
-.joinleagues h3{
-margin-bottom: 16px;
+
+.joinleagues h3 {
+  margin-bottom: 16px;
 }
 
 .WhyChoose-sec {
@@ -1214,14 +1218,17 @@ margin-bottom: 16px;
   transition: 0.5s all ease-in-out;
   margin-inline-end: 5px;
 }
+
 ul.footer-list li a {
   font-size: 1.1rem;
 }
+
 .social:hover {
   border-color: transparent;
-  transform:translateY(-2px);
+  transform: translateY(-2px);
   background-color: var(--custom-btn-bg-hover-color);
 }
+
 .footer_blcks ul {
   display: flex;
   justify-content: space-between;
@@ -1231,6 +1238,7 @@ ul.footer-list li a {
   flex-wrap: wrap;
   gap: 0 20px;
 }
+
 .social-link {
   height: 22px;
   width: 22px;
@@ -1466,10 +1474,12 @@ Contact section
   padding: 10px;
   border-radius: 5px;
 }
-.contact_input:focus{
+
+.contact_input:focus {
   border-color: var(--custom-btn-bg-color);
 }
-.contact_input:focus-visible{
+
+.contact_input:focus-visible {
   border-color: var(--custom-btn-bg-color);
 }
 
@@ -1533,13 +1543,14 @@ Profile  section
   /* display: none; */
   margin-left: 30px;
 }
-.profile-dropdown-options{
+
+.profile-dropdown-options {
   width: 25px;
-height: 24px;
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-margin-right: 10px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
 }
 
 .avatar-content {
@@ -1597,6 +1608,7 @@ margin-right: 10px;
 .playingGuide {
   margin-block: 80px;
 }
+
 .playingGuide_inner {
   display: flex;
   justify-content: start;
@@ -1616,6 +1628,7 @@ margin-right: 10px;
   background-size: cover;
   background-position: center;
 }
+
 .playingGuide_img {
   border-radius: 2px;
   width: 100%;
@@ -1709,7 +1722,8 @@ margin-right: 10px;
   margin-left: 16px;
 }
 
-.playingGuide_item, .playingGuide_subItem {
+.playingGuide_item,
+.playingGuide_subItem {
   font-size: 1.1rem;
   margin-bottom: 8px;
   list-style: disc;
@@ -3301,10 +3315,12 @@ table tr {
   width: 100%;
   margin-bottom: 15px;
 }
-.matches-details .match-details-items{
+
+.matches-details .match-details-items {
   justify-content: center;
-  gap:  0 20px ;
+  gap: 0 20px;
 }
+
 .credits_points button {
   border-radius: 50%;
   background: transparent;
@@ -3374,7 +3390,7 @@ td.match-team-logo a {
   width: max-content;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
-  right:0;
+  right: 0;
   top: 120%;
   display: none;
 }
@@ -3787,17 +3803,10 @@ td.player-name p {
 
 .my-team-page .player-toggle {
   border-radius: 50%;
-  background: transparent;
   border: 2px solid;
-  position: absolute;
   width: 25px;
   height: 25px;
   line-height: 1;
-  right: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 10px;
-  border-color: var(--pre-blue) !important;
 }
 
 .font-medium {
@@ -4301,12 +4310,14 @@ fieldset {
   color: var(--white-color);
 }
 
-.nav-link.active{
- color:  var(--custom-btn-bg-color);
+.nav-link.active {
+  color: var(--custom-btn-bg-color);
 }
+
 .nav-link:hover {
-  color:  var(--custom-btn-bg-color);
+  color: var(--custom-btn-bg-color);
 }
+
 /* ==================== */
 
 
@@ -4314,9 +4325,11 @@ fieldset {
 .match-header.upcoming-match {
   padding: 80px 0;
 }
+
 section.matches {
   margin-bottom: 70px;
 }
+
 .match-header {
   background: url(../images/match-detailsbg.jpg) no-repeat;
   padding: 60px 0 0;
@@ -4973,21 +4986,15 @@ a.tab.active {
   width: 41px;
 }
 
-button.plus.player-toggle {
+button.player-toggle {
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
   background: #000000;
-  position: unset;
-  transform: unset;
-  margin: 0;
 }
 
-button.plus.player-toggle i {
+button.player-toggle i {
   color: #fff;
 }
 
@@ -5020,13 +5027,10 @@ button.plus.player-toggle i {
   color: #fff;
   border-radius: 14px;
   padding: 30px;
-  margin: 0 0 40px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  background: url(../images/Background.jpg);
   position: relative;
   z-index: 1;
+  width: 100%;
+  max-width: 100%;
 }
 
 .team-view-header::after {
@@ -5383,6 +5387,7 @@ li.team-member .match-team-logo img {
   color: var(--custom-btn-bg-color);
   background-color: var(--white-color);
 }
+
 .contact_form textarea {
   width: 100%;
   border: 1px solid #ccc;
@@ -5395,7 +5400,7 @@ li.team-member .match-team-logo img {
 .contact_inner textarea:focus {
   box-shadow: none;
   outline: none;
-  border-color:var(--custom-btn-bg-color);
+  border-color: var(--custom-btn-bg-color);
 }
 
 .contact_inner .contact_left,
@@ -5558,6 +5563,7 @@ li.team-member .match-team-logo img {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
 }
+
 h2.leagues_heading {
   font-size: 30px;
   color: #DDA15E;
@@ -5569,6 +5575,7 @@ h2.leagues_heading {
   width: 100%;
   text-align: center;
 }
+
 .leagues_headLogo img {
   height: 60px;
   width: 60px;
@@ -5653,16 +5660,17 @@ h2.leagues_heading {
 
 .leagues_list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 .leagues_item {
-  width: 100%;
-  width: 45%;
+  width: 30%;
 }
-.leagues  .leagues_wrapper {
-  max-width: 800px;
+
+.leagues .leagues_wrapper {
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
@@ -5858,7 +5866,9 @@ h2.leagues_heading {
 
 .team_viewinner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .team_viewSec h4 {
@@ -5920,13 +5930,16 @@ h2.leagues_heading {
 
 .match_details .leagues_item {
   width: 100%;
-  max-width: 32%;
+  max-width: 30%;
   list-style: none;
 }
 
 .match_detailsInner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  gap: 30px;
 }
 
 .matches_ftr {
@@ -5968,12 +5981,13 @@ h2.leagues_heading {
 
 .my-matchesList {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .my-matchesList .matches_item {
-  width: 32%;
+  width: 30%;
   margin-bottom: 16px;
 }
 
@@ -5993,6 +6007,7 @@ h2.leagues_heading {
   background-color: var(--custom-btn-bg-color) !important;
   color: white !important;
 }
+
 .update_img_user {
   position: relative;
   width: 5rem;
@@ -6048,7 +6063,8 @@ h2.leagues_heading {
 
 
 
-.bannerLogin_wrapper span.alert ,#login-signup span.alert{
+.bannerLogin_wrapper span.alert,
+#login-signup span.alert {
   top: 10px;
   position: absolute;
   max-width: 250px;
@@ -6065,7 +6081,8 @@ h2.leagues_heading {
   max-width: 500px;
   margin: 0 auto;
 }
-.signup-btn-box{
+
+.signup-btn-box {
   text-align: center;
 }
 
@@ -6074,6 +6091,7 @@ h2.leagues_heading {
 .custom-blog-cards-section {
   background-color: #b78752;
 }
+
 .custom-blog-card-image {
   height: 200px;
   background-image: url("../images/banner.png");
@@ -6093,7 +6111,7 @@ h2.leagues_heading {
 }
 
 .custom-blog-card:hover {
- transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 
 .custom-blog-card-content {
@@ -6148,34 +6166,105 @@ h2.leagues_heading {
 section#barista-team {
   background: #fff;
 }
+
 .SignUp h6 {
   color: #fff;
   font-size: 1.8rem;
 }
+
 #barista-team h2 {
   color: #BC6C25;
 }
+
 .WhyChoose h2 {
   color: #BC6C25;
 }
+
 .copyRight p {
   font-size: 1rem;
   text-align: center;
 }
+
 .playingGuide .row .col-12 {
   margin-bottom: 35px;
 }
+
 .WhyChoose-content p {
   font-size: 1.1rem;
 }
+
 .matches-detail .match-details-items {
   display: flex;
   justify-content: center;
   gap: 0 20px;
 }
+
 .matches-detail {
   margin-bottom: 60px;
 }
+
 .col-sec form {
   text-align: center;
+}
+
+.matches-detail .leagues_inner {
+  display: block;
+  border: 2px solid #dda15e;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 4px;
+  margin-block: 20px;
+}
+
+.match-details-items .leagues_item {
+  width: 100%;
+  max-width: 23%;
+  list-style: none;
+}
+
+.match-details-items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.modal-body span svg {
+  height: 80px !important;
+  width: 80px !important;
+}
+
+.modal-body span {
+  display: block !important;
+  text-align: center !important;
+}
+.modal-body {
+  text-align: center !important;
+}
+.modal-footer {
+  justify-content: center !important;
+}
+.modal-footer button {
+  padding: 10px 40px !important;
+  font-size: 18px !important;
+  text-transform: uppercase !important;
+  background-color: #bc6c25 !important;
+  border: 1px solid #bc6c25 !important;
+  outline: none !important;
+  transition: 0.3s all ease-in-out;
+}
+
+.modal-footer button:hover {
+  background-color: #fff !important;
+  color: #bc6c25 !important;
+}
+.match-details button.player-toggle {
+  margin: 0px auto;
+}
+.schedule-stats .single-team {
+  width: 40%;
+}
+.schedule-stats .date-times-vs span.time {
+  flex-direction: column;
+  text-align: center;
+}
+.cricket_leagues {
+  padding: 5rem 1rem;
 }
