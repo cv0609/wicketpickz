@@ -30,10 +30,10 @@
                     <th>
                       S.NO
                     </th>
-                    <th>First Name</th>
-                    <th>Last name</th>
+                    {{-- <th>First Name</th> --}}
+                    <th>Full Name</th>
                     <th>Email</th>
-                    <th>Phone</th>
+                    {{-- <th>Phone</th> --}}
                     <th>Image</th>
                     <th data-type="date" data-format="YYYY/DD/MM">Date</th>
                   </tr>
@@ -47,10 +47,10 @@
                     
                     <tr>
                         <td>{{ $sno }}</td>
-                        <td>{{ $value->first_name }}</td>
-                        <td>{{ $value->last_name }}</td>
+                        <td>{{ $value->name }}</td>
+                        {{-- <td>{{ $value->last_name }}</td> --}}
                         <td>{{ $value->email }}</td>
-                        <td>{{ $value->phone }}</td>
+                        {{-- <td>{{ $value->phone }}</td> --}}
                         <td class="admin-user-img"><img src="{{ asset($value->image) }}" alt="" style="height: 48px;"></td>
                         <td>{{ $value->created_at }}</td>
                     </tr>

@@ -45,7 +45,7 @@
                   @foreach($contact as $value)
                     <tr>
                         <td>{{ $sno }}</td>
-                        <td>{{ $value->full_name }}</td>
+                        <td>{{ $value->name }}</td>
                         <td>{{ $value->email }}</td>
                         <td>{{ $value->subject }}</td>
                         <td>{{ $value->message }}</td>
