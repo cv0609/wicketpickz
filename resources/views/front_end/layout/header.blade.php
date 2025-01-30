@@ -10,7 +10,7 @@
          </button>
 
          <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav ms-lg-auto">
+             {{-- <ul class="navbar-nav ms-lg-auto">
                  <li class="nav-item">
                      <a class="nav-link click-scroll active" href="{{ route('home') }}">Home</a>
                  </li>
@@ -31,7 +31,31 @@
                  <li class="nav-item">
                      <a class="nav-link click-scroll" href="{{ route('contact-us') }}">Contact</a>
                  </li>
-             </ul>
+             </ul> --}}
+
+             <ul class="navbar-nav ms-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link click-scroll {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link click-scroll {{ request()->routeIs('how-to-play') ? 'active' : '' }}" href="{{ route('how-to-play') }}">Playing Guide</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link click-scroll {{ request()->routeIs('leagues') ? 'active' : '' }}" href="{{ route('leagues') }}">Play Now</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link click-scroll {{ request()->routeIs('about-us') ? 'active' : '' }}" href="{{ route('about-us') }}">About</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a class="nav-link click-scroll {{ request()->routeIs('contact-us') ? 'active' : '' }}" href="{{ route('contact-us') }}">Contact</a>
+                </li>
+            </ul>
+            
+
              @if(!Auth::check())
              <div>
                  <ul class="header_right">

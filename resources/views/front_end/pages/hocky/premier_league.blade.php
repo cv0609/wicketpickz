@@ -1,4 +1,5 @@
 @extends('front_end.layout.main')
+@section('title', 'League')
 @section('content')
 
 <!--Leagues Pages Banner Section Start -->
@@ -12,7 +13,7 @@
                     </h3>
                 </li>
                 <li class="inline-list next-page-list">
-                    <h3>league</h3>
+                    <h3>League</h3>
                 </li>
             </ul>
         </div>

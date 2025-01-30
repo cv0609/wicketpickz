@@ -1,4 +1,5 @@
 @extends('front_end.layout.main')
+@section('title', 'Matches details')
 @section('content')
 
 @php
@@ -44,12 +45,12 @@
             </div>
             <!-- Component Start -->
             <h1 class="text-center heading-center">
-                My Players
+                Match Details
             </h1>
 
             <ul>
                 <li class="matches_item">
-                    <a href="match-details.html" class="matches_link">
+                    <a href="javascript:void(0)" class="matches_link">
                         <div class="matches_head">
                             <span class="tournament-name">{{$leagues->name ?? ''}}</span>
                             <span class="stadium-name">{{$leagues->country_name ?? ''}}</span>

@@ -1,4 +1,5 @@
 @extends('front_end.layout.main')
+@section('title', 'Privacy Policy')
 @section('content')
 <!-- banner section -->
 <div class="banner banner-privcyPolicy">

@@ -1,4 +1,5 @@
 @extends('front_end.layout.main')
+@section('title', 'Home')
 @section('content')
 <!-- banner section -->
 <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
@@ -55,6 +56,7 @@
 
 
 <!-- signup section -->
+@if(!Auth::user())
 <section class="SignUp">
     <div class="container">
         <div class="row">
@@ -71,6 +73,7 @@
         </div>
     </div>
 </section>
+@endif
 <!-- signup section -->
 
 <section class="barista-section section-padding section-bg" id="barista-team">
