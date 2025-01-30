@@ -1,4 +1,5 @@
 @extends('front_end.layout.main')
+@section('title', 'My Profile')
 @section('content')
 
 <!--Leagues Pages Banner Section Start -->

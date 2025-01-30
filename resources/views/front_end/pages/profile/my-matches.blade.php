@@ -1,4 +1,5 @@
 @extends('front_end.layout.main')
+@section('title', 'My Matches')
 @section('content')
 
 <div class="basket_leagues my-matches">

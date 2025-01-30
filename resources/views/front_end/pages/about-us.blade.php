@@ -1,4 +1,5 @@
 @extends('front_end.layout.main')
+@section('title', 'About us')
 @section('content')
 <!-- banner section -->
 <div class="banner banner--about">
