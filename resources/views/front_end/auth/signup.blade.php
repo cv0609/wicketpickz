@@ -47,6 +47,13 @@
                             <input placeholder="Confirm Password" type="password" tabindex="6" name="password_confirmation"
                                 class="signup-input">
                         </fieldset>
+                        <fieldset>
+                        <div class="g-recaptcha" data-sitekey={{env('RECAPTCHA_SITE_KEY')}}></div>
+                        </fieldset>
+
+                        @error('g-recaptcha-response')
+                          <span class="text-danger">{{ $message }}</span>
+                        @enderror
 
                         <fieldset>
                             <button name="submit" type="submit" id="signup-submit" data-submit="...Sending">Signup

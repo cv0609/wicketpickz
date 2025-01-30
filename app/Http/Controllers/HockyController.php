@@ -113,8 +113,8 @@ class HockyController extends Controller
         }
 
         return response()->json([
-            'captain' => true,
-            'vice_captain' => true,
+            'captain' => $captainMissing,
+            'vice_captain' => $viceCaptainMissing,
             'error' => $authCheck,
             'myTeam' => $myTeam
         ]);
@@ -266,7 +266,7 @@ class HockyController extends Controller
     {
         $event = $request->input('event');
         $credentials = $request->only(['league_id', 'match_id']);
-
+        
         $myTeam = Session::get('myTeam', []);
         $updated = false;
 

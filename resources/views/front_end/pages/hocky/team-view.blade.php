@@ -68,7 +68,11 @@
                                         <h4>Player</h4>
                                         <p>{{$item['player_name']}}</p>
                                     </div>
-                                    <div class="team_viewcaptain team_viewSec team_captain" data-league_id={{ $item['league_id'] }} data-match_id={{ $item['match_id'] }} data-already_captain={{ $item['already_captain'] ?? '' }} data-player_name={{ $item['player_name'] ?? '' }}>
+                                    <div class="team_viewcaptain team_viewSec team_captain" 
+                                    data-league_id="{{ $item['league_id'] }}"
+                                    data-match_id="{{ $item['match_id'] }}"
+                                    data-already_captain="{{ $item['already_captain'] ?? '' }}"
+                                    data-player_name="{{ $item['player_name'] ?? '' }}">
                                         <h4>Captain</h4>
                                         {{-- <button class="plus player-toggle">
                                                 <i class="fa-solid fa-plus"></i>
@@ -84,9 +88,12 @@
                                             <i class="fa-solid fa-minus"></i>
                                         </button>
 
-
                                     </div>
-                                    <div class="team_viewVCcaptain team_viewSec team_captain" data-league_id={{ $item['league_id'] }} data-match_id={{ $item['match_id'] }}data-already_captain={{ $item['already_captain'] ?? '' }} data-player_name={{ $item['player_name'] ?? '' }}>
+                                    <div class="team_viewVCcaptain team_viewSec team_captain" 
+                                    data-league_id="{{ $item['league_id'] }}"
+                                    data-match_id="{{ $item['match_id'] }}" 
+                                    data-already_vice_captain="{{ $item['already_vice_captain'] ?? '' }}"
+                                    data-player_name="{{ $item['player_name'] ?? '' }}">
                                         <h4>Voice Captain</h4>
                                         {{-- <button class="plus player-toggle">
                                                 <i class="fa-solid fa-plus"></i>
@@ -177,50 +184,31 @@
 @section('custom-script')
 <script>
     $(document).ready(function() {
+        var myTeam = @json($myTeam);
 
-        // $('.team_viewSelect').each(function() {
-        //     var row = $(this);
+        $('.team_viewSelect').each(function() {
+            var row = $(this);
+            var isCaptain = row.find('.team_viewcaptain').data('already_captain');
+            var isViceCaptain = row.find('.team_viewVCcaptain').data('already_vice_captain');
 
-        //     // Retrieve data attributes from the row
-        //     var leagueId = row.find('.team_captain').data('league_id');
-        //     var matchId = row.find('.team_captain').data('match_id');
+            // Toggle captain buttons
+            if (isCaptain) {
+                row.find('.captain-plus').addClass('d-none');
+                row.find('.captain-minus').removeClass('d-none');
+            } else {
+                row.find('.captain-plus').removeClass('d-none');
+                row.find('.captain-minus').addClass('d-none');
+            }
 
-        //     // var teamId = row.find('.team_captain').data('team_id');
-        //     var playerName = row.find('.team_captain').data('player_name');
-
-        //     // Check for captain status
-        //     var isCaptain = myTeam.some(function(player) {
-        //         return player.league_id == leagueId &&
-        //             player.match_id == matchId && player.is_captain == "1" && player.player_name == playerName;
-        //     });
-
-        //     var isViceCaptain = myTeam.some(function(player) {
-        //         return player.league_id == leagueId &&
-        //             player.match_id == matchId && player.is_vice_captain == "1" && player.player_name == playerName;
-        //     });
-        //     // // Check for vice-captain status
-        //     // var isViceCaptain = myTeam.some(function(player) {
-        //     //     return player.league_id == leagueId &&
-        //     //         player.match_id == matchId && player.is_vice_captain == '1' && player.player_name == playerName;
-        //     // });
-
-        //     // Show or hide buttons based on the player status
-        //     // if (isCaptain) {
-        //     //     row.find('.team_captain .plus').addClass('d-none');
-        //     //     row.find('.team_captain .minus').removeClass('d-none');
-        //     // } else {
-        //     //     row.find('.team_captain .plus').removeClass('d-none');
-        //     //     row.find('.team_captain .minus').addClass('d-none');
-        //     // }
-
-        //     // if (isViceCaptain) {
-        //     //     row.find('.team_vice_captain .plus').addClass('d-none');
-        //     //     row.find('.team_vice_captain .minus').removeClass('d-none');
-        //     // } else {
-        //     //     row.find('.team_vice_captain .plus').removeClass('d-none');
-        //     //     row.find('.team_vice_captain .minus').addClass('d-none');
-        //     // }
-        // });
+            // Toggle vice-captain buttons
+            if (isViceCaptain) {
+                row.find('.vice-cap-plus').addClass('d-none');
+                row.find('.vice-cap-minus').removeClass('d-none');
+            } else {
+                row.find('.vice-cap-plus').removeClass('d-none');
+                row.find('.vice-cap-minus').addClass('d-none');
+            }
+       });
 
         // Set CSRF token globally
         $.ajaxSetup({
@@ -240,7 +228,7 @@
             // Prevent more than one captain or vice-captain being selected
             if (button.hasClass('captain-plus')) {
                 var visibleMinusCount = $('.captain-minus').not('.d-none').length;
-                console.log(visibleMinusCount,'visibleMinusCount');
+                console.log(visibleMinusCount, 'visibleMinusCount');
                 if (visibleMinusCount >= 1) {
                     $("#cap-message").html("Captain already selected.");
                     $("#capModal").modal('show');
@@ -250,7 +238,7 @@
 
             if (button.hasClass('vice-cap-plus')) {
                 var vicevisibleMinusCount = $('.vice-cap-minus').not('.d-none').length;
-                console.log(vicevisibleMinusCount,'vicevisibleMinusCount');
+                console.log(vicevisibleMinusCount, 'vicevisibleMinusCount');
                 if (vicevisibleMinusCount >= 1) {
                     $("#cap-message").html("Vice Captain already selected.");
                     $("#capModal").modal('show');
