@@ -174,11 +174,11 @@
                 $('#messageError').removeClass('d-none').text('Message field is required.');
                 valid = false;
             }
-            var recaptchaResponse = grecaptcha.getResponse();
-            if (recaptchaResponse.length === 0) {
-                $('.g-recaptcha').after('<p class="text-danger">Please complete the reCAPTCHA.</p>');
-                valid = false;
-            }
+            //  var recaptchaResponse = grecaptcha.getResponse();
+            // if (recaptchaResponse.length === 0) {
+            //     $('.g-recaptcha').after('<p class="text-danger">Please complete the reCAPTCHA.</p>');
+            //     valid = false;
+            // }
 
             if (valid) {
                 $('#contactForm').submit();
