@@ -73,11 +73,11 @@
 
                                     <p class="text-danger d-none" id="messageError"></p>
                                 </label>
-                                <div class="g-recaptcha" data-sitekey={{env('RECAPTCHA_SITE_KEY')}}></div>
+                                {{-- <div class="g-recaptcha" data-sitekey={{env('RECAPTCHA_SITE_KEY')}}></div>
 
                                 @error('g-recaptcha-response')
                                  <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                @enderror --}}
                                 <button type="button" id="contact-btn" class="custom-btn contact_btn">Submit</button>
                                 {{-- <input class="custom-btn contact_btn" type="button" value="Submit"> --}}
                             </form>
