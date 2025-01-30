@@ -114,7 +114,7 @@
                                             </div>
                                             <div class="leagues_ftrInnerEnd leagues_ftrInnersec">
                                                 <h3>Age</h3>
-                                                <p>-</p>
+                                                <p>{{$player['age'] ?? '-'}}</p>
                                             </div>
                                             <div class="leagues_ftrInnerEnd leagues_ftrInnersec">
                                                 <h3>Injured</h3>
