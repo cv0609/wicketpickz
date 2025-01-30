@@ -12,7 +12,7 @@
                     </svg>
                 </a>
             </div>
-            <h2 class="text-center leagues_heading">{{ date('Y').'-'.(date('Y') + 1) }} Season</h2>
+            <h2 class="text-center leagues_heading">Season {{ date('Y').'-'.(date('Y') + 1) }}</h2>
 
             <div class="team-view-sec">
                 <div class="team-view-header">

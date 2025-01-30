@@ -42,7 +42,7 @@
     <div class="container">
         <div class="matches_wrapper">
             <div class="matches_inner">  
-                <h2 class="text-center leagues_heading">{{ date('Y').'-'.(date('Y') + 1) }} Season</h2>
+                <h2 class="text-center leagues_heading">Season {{ date('Y').'-'.(date('Y') + 1) }}</h2>
 
                 <ul class="matches_list">
                 @foreach ($matches as $key => $matche)

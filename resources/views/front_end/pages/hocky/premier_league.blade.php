@@ -24,7 +24,7 @@
 <section class="leagues cricket_leagues">
     <div class="container">
         <div class="leagues_wrapper">
-            <h2 class="text-center leagues_heading">{{ date('Y').'-'.(date('Y') + 1) }} Season</h2>
+            <h2 class="text-center leagues_heading">Season {{ date('Y').'-'.(date('Y') + 1) }}</h2>
             <ul class="leagues_list">
                 @foreach ($leagues as $key => $league)
                 <li class="leagues_item">
