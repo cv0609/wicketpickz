@@ -66,7 +66,7 @@
                                     {{-- <span class="time"><i class="fa-regular fa-clock"></i> 09:00 AM</span>
                                     <span class="date">24 Nov SAT, 2025</span> --}}
                                     <span class="date">{{ date('Y-m-d h:i a',strtotime($matchDetails->fixture_date ?? ''))}}</span>
-                                    <img src="assets/images/vs.png" alt="" class="versace-icon">
+                                    <img src="{{asset('assets/images/vs.png')}}" alt="" class="versace-icon">
                                 </div>
                                 <div class="single-team">
                                     <div class="team-icon">

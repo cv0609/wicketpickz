@@ -34,7 +34,7 @@
                                             <span class="time"><i class="fa-regular fa-clock"></i> {{ date('A h:i a', strtotime($match['fixture_date'])) }}</span>
                                             <span class="date">{{ date('Y-m-d',strtotime($match['fixture_date']))}}</span>
 
-                                            <img src="{{'assets/images/vs.png'}}" alt="" class="versace-icon">
+                                            <img src="{{asset('assets/images/vs.png')}}" alt="" class="versace-icon">
                                         </div>
                                         <div class="single-team">
                                             <div class="team-icon">
