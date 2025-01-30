@@ -161,6 +161,7 @@ class HockyController extends Controller
                             'player_team_logo' => $team['team_logo'],
                             'is_captain' => '1',
                             'is_vice_captain' => '1',
+                            'age' => $team['age'] ?? '',
                             'created_at' => Carbon::now(),
                             'updated_at' => Carbon::now()
                         ]);
@@ -193,6 +194,7 @@ class HockyController extends Controller
         $homeTeamId = $request->homeTeamId;
         $awayTeamId = $request->awayTeamId;
         $dbMatchId = $request->dbMatchId;
+        $age = $request->age ?? '';
         $myTeam = [];
 
         if (isset($request->event) && $request->event == "plus") {
@@ -216,6 +218,7 @@ class HockyController extends Controller
                     'homeTeamId' => $homeTeamId,
                     'awayTeamId' => $awayTeamId,
                     'dbMatchId' => $dbMatchId,
+                    'age' => $age,
                 ];
                 Session::put('myTeam', $myTeam);
             }

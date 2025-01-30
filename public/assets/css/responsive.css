@@ -1,6 +1,13 @@
 /*---------------------------------------
   RESPONSIVE STYLES               
 -----------------------------------------*/
+@media screen and (max-width: 1399px) {
+  .Matches_body {
+    padding: 25px 10px;
+}
+}
+
+
 @media screen and (max-width: 1200px) {
   h1 {
     font-size: 62px;
@@ -9,8 +16,6 @@
   .basket_leagues-inner {
     margin-block: 70px;
   }
-
-
   .leagues-pages {
     height: 450px;
   }
@@ -18,6 +23,10 @@
   .login_signup_form {
     padding-block: 100px 80px;
   }
+
+html{
+  font-size: 15px;
+}
 }
 
 @media screen and (max-width: 991px) {
@@ -354,6 +363,7 @@
   .match_detailsInner {
     justify-content: center;
   }
+
 }
 
 @media screen and (max-width: 767px) {
