@@ -28,11 +28,11 @@
                           </fieldset>
 
                           <fieldset>
-                          <div class="g-recaptcha" data-sitekey={{env('RECAPTCHA_SITE_KEY')}}></div>
+                          {{-- <div class="g-recaptcha" data-sitekey={{env('RECAPTCHA_SITE_KEY')}}></div>
                           </fieldset>
                           @error('g-recaptcha-response')
                            <span class="text-danger">{{ $message }}</span>
-                          @enderror
+                          @enderror --}}
 
                           <fieldset>
                               <button name="submit" type="submit" id="login-submit" data-submit="...Sending"
