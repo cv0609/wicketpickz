@@ -2,6 +2,24 @@
 @section('title', 'Our Team')
 @section('content')
 
+<!--Leagues Pages Banner Section Start -->
+<section class="pages-banner leagues-pages bg-cover bg-no-repeat banner banner_leagues">
+    <div class="container">
+        <div class="banner-content banner-content">
+            <ul class="leagues-ul">
+                <li class="inline-list home-list">
+                    <h3>
+                        <a href="{{ route('home') }}">Home</a>
+                    </h3>
+                </li>
+                <li class="inline-list next-page-list">
+                    <h3>My Team</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <div class="basket_leagues my-team-page cricket_leagues">
     <div class="container">
         <div class="basket_leagues-inner">

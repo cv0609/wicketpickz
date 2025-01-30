@@ -54,26 +54,26 @@
                                 <label class="contact_label">
                                     Your Name
                                     <input class="contact_input" name="name" id="name" type="text" value="{{ old('name') }}" placeholder="Your Name">
-                                    <p class="text-danger d-none" id="nameError"></p>
                                 </label>
+                                <p class="text-danger d-none" id="nameError"></p>
                                 <label class="contact_label">
                                     Email Address
                                     <input class="contact_input" type="email" placeholder="Email Address" name="email" id="email" value="{{ old('email') }}">
                                    
-                                    <p class="text-danger d-none" id="emailError"></p>
                                 </label>
+                                <p class="text-danger d-none" id="emailError"></p>
                                 <label class="contact_label">
                                     Subject
                                     <input class="contact_input" type="text"
                                         placeholder="Subject" name="subject" id="subject" value="{{ old('subject') }}">
+                                    </label>
                                     <p class="text-danger d-none" id="subjectError"></p>
-                                </label>
                                 <label class="contact_label">
                                     Message
                                     <textarea class="input_textarea" placeholder="Message" name="message" id="message">{{ old('message') }}</textarea>
 
-                                    <p class="text-danger d-none" id="messageError"></p>
                                 </label>
+                                <p class="text-danger d-none" id="messageError"></p>
                                 {{-- <div class="g-recaptcha" data-sitekey={{env('RECAPTCHA_SITE_KEY')}}></div>
 
                                 @error('g-recaptcha-response')
