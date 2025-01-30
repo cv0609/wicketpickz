@@ -33,7 +33,7 @@
 
 
 <!-- Leagues Content Section Start -->
-<section class="basket_leagues match-details-page  match-details">
+<section class="basket_leagues match-details-page  match-details cricket_leagues">
     <div class="container">
         <div class="basket_leagues-inner">
             <div class="back-btn">

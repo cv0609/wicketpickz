@@ -21,7 +21,7 @@
 </section>
 
 <!-- Leagues Content Section Start -->
-<section class="leagues py-5">
+<section class="leagues cricket_leagues">
     <div class="container">
         <div class="leagues_wrapper">
             <h2 class="leagues_heading pb-5 text-center">

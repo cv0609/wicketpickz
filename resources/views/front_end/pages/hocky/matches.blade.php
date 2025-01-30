@@ -21,7 +21,7 @@
 </section>
 
 <!-- matches section -->
-<section class="basket_leagues matches">
+<section class="basket_leagues matches cricket_leagues">
     <div class="container">
         <div class="basket_leagues-inner">
             <div class="back-btn">

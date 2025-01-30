@@ -2,7 +2,7 @@
 @section('title', 'My Matches')
 @section('content')
 
-<div class="basket_leagues my-matches">
+<div class="basket_leagues my-matches cricket_leagues">
     <div class="container">
         <div class="basket_leagues-inner">
             <h2 class="text-center">My Matches</h2>
