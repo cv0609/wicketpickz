@@ -27,7 +27,7 @@
                             @enderror   
                           </fieldset>
 
-                          <fieldset>
+                          {{-- <fieldset> --}}
                           {{-- <div class="g-recaptcha" data-sitekey={{env('RECAPTCHA_SITE_KEY')}}></div>
                           </fieldset>
                           @error('g-recaptcha-response')

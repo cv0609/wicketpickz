@@ -22,7 +22,11 @@ class UpdateProfile extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => 'unique:users,email,'. Auth::user()->id
+            'name' => 'required',
+            'username' => 'required',
+            // 'email' => 'required,unique:users,email,'. Auth::user()->id,
+            'email' => 'required|email|unique:users,email,' . Auth::user()->id,
+
         ];
     }
 }

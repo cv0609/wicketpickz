@@ -40,14 +40,23 @@
                                         <div class="mb-3 col-sm-12">
                                             <input type="text" placeholder="Name" class="form-control para" id="name"
                                             name="name" value="{{Auth::user()->name}}">
+                                            @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                         <div class="mb-3 col-sm-12">
                                             <input type="text" placeholder="Username" class="form-control para"
                                                 id="last-name" name="username" autocomplete="off" value="{{Auth::user()->username}}">
+                                            @error('username')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                         <div class="mb-3 col-sm-12">
                                             <input type="email" placeholder="E-mail" class="form-control para"
                                                 id="email" name="email" value="{{Auth::user()->email}}">
+                                            @error('email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                            @enderror
                                         </div>
                                         <!-- <div class="mb-3 col-sm-6">
                                             <input type="text" placeholder="Telephone" class="form-control para"
