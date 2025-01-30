@@ -44,9 +44,9 @@
                 </a>
             </div>
             <!-- Component Start -->
-            <h1 class="text-center heading-center">
-                Match Details
-            </h1>
+            <h2 class="text-center heading-center leagues_heading">
+                My Players
+            </h2>
 
             <ul>
                 <li class="matches_item">

@@ -35,13 +35,11 @@
                 </a>
             </div>
             <!-- Component Start -->
-            <h1 class="text-center heading-center">
-                My Players
-            </h1>
+            <h2 class="text-center leagues_heading">Season {{ date('Y').'-'.(date('Y') + 1) }}</h2>
 
             <ul>
                 <li class="matches_item">
-                    <a href="match-details.html" class="matches_link">
+                    <a href="javascript:void(0)" class="matches_link">
                         <div class="matches_head">
                             <span class="tournament-name">{{$leagues->name ?? ''}}</span>
                             <span class="stadium-name">{{$leagues->country_name ?? ''}}</span>
