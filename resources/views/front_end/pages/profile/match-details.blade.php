@@ -33,11 +33,11 @@
 
 
 <!-- Leagues Content Section Start -->
-<section class="basket_leagues match-details-page  match-details">
+<section class="basket_leagues match-details-page  match-details cricket_leagues">
     <div class="container">
         <div class="basket_leagues-inner">
             <div class="back-btn">
-                <a href="my-matches" class="back-btn">
+                <a href="{{ route('profile.matches') }}" class="back-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
                         <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z" />
                     </svg>
