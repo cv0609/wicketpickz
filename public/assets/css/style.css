@@ -2532,8 +2532,8 @@ fieldset {
 }
 
 .jump-text a {
-  color: rgba(0, 0, 0, 80%);
   font-weight: 400;
+  color: #bc6c25;
 }
 
 ::-webkit-input-placeholder {
@@ -2566,18 +2566,6 @@ fieldset {
   margin: 0 auto;
   position: relative;
 }
-
-/* .signup_inner::after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  border-radius: 8px;
-  content: "";
-  background-color: rgb(0 0 0 / 20%);
-} */
-
 /* Login Signup Form Pages CSS Start */
 
 /* Leagues Pages CSS Start */
@@ -4325,11 +4313,6 @@ fieldset {
 .match-header.upcoming-match {
   padding: 80px 0;
 }
-
-section.matches {
-  margin-bottom: 70px;
-}
-
 .match-header {
   background: url(../images/match-detailsbg.jpg) no-repeat;
   padding: 60px 0 0;
@@ -4665,11 +4648,6 @@ section.matches {
   padding-left: 1.875rem;
   position: relative;
 }
-
-.basket_leagues-inner {
-  margin-block: 80px;
-}
-
 .basket_leagues-inner h2 {
   font-size: 35px;
   color: var(--custom-btn-bg-color);
@@ -5564,9 +5542,10 @@ li.team-member .match-team-logo img {
   border-radius: 4px;
 }
 
-h2.leagues_heading {
-  font-size: 30px;
-  color: #DDA15E;
+.leagues_heading {
+  font-size: 1.875rem;
+  color: #bc6c25;
+  margin-bottom: 40px;
 }
 
 .leagues_headLogo {
@@ -5981,7 +5960,7 @@ h2.leagues_heading {
 
 .my-matchesList {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -6267,4 +6246,15 @@ section#barista-team {
 }
 .cricket_leagues {
   padding: 5rem 1rem;
+}
+.basket_leagues.matches {
+  padding: 5rem 0 0 0;
+}
+.my-matches .basket_leagues-inner {
+  margin-top: 80px;
+}
+.user-content-box .text-danger {
+  text-align: left;
+  display: block;
+  margin-top: 10px;
 }
