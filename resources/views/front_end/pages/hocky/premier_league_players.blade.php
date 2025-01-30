@@ -78,7 +78,8 @@
 
                             @foreach($matchPlayers as $player)
 
-                            <li class="leagues_item" data-player-id="{{$player['player_id']}}" data-player-role="{{$player['position']}}" data-player-name="{{$player['name']}}" data-team-logo="{{$player['team_logo']}}" data-match-id="{{$matchDetails->id}}" data-team-name="testing" data-home-team="{{ $matchDetails->home_team_id }}" data-away-team="{{ $matchDetails->away_team_id }}" data-slug-matchid="{{ $matchDetails->id }}">
+                            <li class="leagues_item" data-player-id="{{$player['player_id']}}" data-player-role="{{$player['position']}}" data-player-name="{{$player['name']}}" data-team-logo="{{$player['team_logo']}}" data-match-id="{{$matchDetails->id}}" data-team-name="testing" data-home-team="{{ $matchDetails->home_team_id }}" data-away-team="{{ $matchDetails->away_team_id }}" data-slug-matchid="{{ $matchDetails->id }}"
+                            data-age="{{ $player['age'] }}">
                                 <div class="leagues_inner">
                                     <div class="leagues_head">
                                         <div class="leagues_headLogo">
@@ -236,6 +237,7 @@
                 , homeTeamId: $li.data('home-team')
                 , awayTeamId: $li.data('away-team')
                 , dbMatchId: $li.data('slug-matchid')
+                , age: $li.data('age')
             , };
 
             $.ajax({

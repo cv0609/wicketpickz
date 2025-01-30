@@ -17,7 +17,8 @@ class TeamDetail extends Model
         'player_team_name',
         'player_team_logo',
         'is_captain',
-        'is_vice_captain'
+        'is_vice_captain',
+        'age',
     ];
 
     public function teams()

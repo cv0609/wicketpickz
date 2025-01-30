@@ -1366,7 +1366,7 @@ Banner section
 }
 
 .banner--about {
-  background-image: url("../images/about-banner.jpg");
+  background-image: url("../images/about_banner_image.jpg");
 }
 
 .banner--contact {
@@ -3899,9 +3899,9 @@ td.player-name p {
   background-image: url("../images/matches-banner.webp");
 }
 
-.banner--about {
+/* .banner--about {
   background-image: url("../images/about-banner.jpg");
-}
+} */
 
 .banner_matchesDtls {
   background-image: url("../images/matches-details-banner.jpg");
@@ -5559,7 +5559,7 @@ li.team-member .match-team-logo img {
   height: 60px;
   width: 60px;
   margin: 15px auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .leagues_bodyheading {
@@ -5664,7 +5664,7 @@ li.team-member .match-team-logo img {
 
 .schedule-stats .date-times-vs span.time {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 26px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -5746,12 +5746,13 @@ li.team-member .match-team-logo img {
 
 .date {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 26px;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: rgba(77, 142, 83, 0.8);
   margin-bottom: -7px;
+  text-align: center;
 }
 
 .team-icon {
@@ -5763,7 +5764,8 @@ li.team-member .match-team-logo img {
 
 .team-icon img {
   height: 50px;
-  width: auto;
+  width: 50px;
+  object-fit: contain;
 }
 
 .matches_link {
@@ -6239,6 +6241,7 @@ section#barista-team {
 }
 .schedule-stats .single-team {
   width: 40%;
+  text-align: center;
 }
 .schedule-stats .date-times-vs span.time {
   flex-direction: column;
