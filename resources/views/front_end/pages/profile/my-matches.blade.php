@@ -5,7 +5,7 @@
 <div class="basket_leagues my-matches cricket_leagues">
     <div class="container">
         <div class="basket_leagues-inner">
-            <h2 class="text-center">My Matches</h2>
+            <h2 class="text-center leagues_heading">My Matches</h2>
             <div class="my-matchesInner">
                 <ul class="my-matchesList">
 
